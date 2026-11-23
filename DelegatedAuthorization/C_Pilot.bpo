@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="CAP" org.eventb.core.type="ℙ(CAP)"/>
+        <org.eventb.core.poIdentifier name="NODE" org.eventb.core.type="ℙ(NODE)"/>
+        <org.eventb.core.poIdentifier name="JOB" org.eventb.core.type="ℙ(JOB)"/>
+        <org.eventb.core.poIdentifier name="need" org.eventb.core.type="ℙ(JOB×CAP)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="rootScope" org.eventb.core.type="ℙ(CAP)"/>
+        <org.eventb.core.poIdentifier name="budget" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="parent" org.eventb.core.type="ℙ(NODE×NODE)"/>
+        <org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(NODE×ℙ(NODE))"/>
+        <org.eventb.core.poIdentifier name="rank" org.eventb.core.type="ℙ(NODE×ℤ)"/>
+        <org.eventb.core.poIdentifier name="owner" org.eventb.core.type="ℙ(JOB×NODE)"/>
+        <org.eventb.core.poPredicate name="rootScopf" org.eventb.core.predicate="finite(NODE)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm01"/>
+        <org.eventb.core.poPredicate name="rootScopg" org.eventb.core.predicate="finite(CAP)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm02"/>
+        <org.eventb.core.poPredicate name="rootScoph" org.eventb.core.predicate="finite(JOB)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm03"/>
+        <org.eventb.core.poPredicate name="rootScopi" org.eventb.core.predicate="root∈NODE" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm04"/>
+        <org.eventb.core.poPredicate name="rootScopj" org.eventb.core.predicate="rootScope⊆CAP" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm05"/>
+        <org.eventb.core.poPredicate name="rootScopk" org.eventb.core.predicate="rootScope≠(∅ ⦂ ℙ(CAP))" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm06"/>
+        <org.eventb.core.poPredicate name="rootScopl" org.eventb.core.predicate="parent∈NODE ∖ {root} → NODE" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm07"/>
+        <org.eventb.core.poPredicate name="rootScopm" org.eventb.core.predicate="rank∈NODE → ℕ" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm08"/>
+        <org.eventb.core.poPredicate name="rootScopn" org.eventb.core.predicate="rank(root)=0" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm09"/>
+        <org.eventb.core.poPredicate name="rootScopo" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒rank(parent(a))&lt;rank(a)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poPredicate name="rootScopp" org.eventb.core.predicate="path∈NODE → ℙ(NODE)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm11"/>
+        <org.eventb.core.poPredicate name="rootScopq" org.eventb.core.predicate="path(root)={root}" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poPredicate name="rootScopr" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒path(a)={a}∪path(parent(a))" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poPredicate name="rootScops" org.eventb.core.predicate="owner∈JOB → NODE ∖ {root}" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm14"/>
+        <org.eventb.core.poPredicate name="rootScopt" org.eventb.core.predicate="need∈JOB → CAP" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm15"/>
+        <org.eventb.core.poPredicate name="rootScopu" org.eventb.core.predicate="budget∈ℕ1" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm16"/>
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="req3" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="req2" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="req1" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="a1" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="a2" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="a3" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="readCap" org.eventb.core.type="CAP"/>
+        <org.eventb.core.poIdentifier name="writeCap" org.eventb.core.type="CAP"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Pilot.bpo|org.eventb.core.poFile#C_Pilot|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(NODE,{u},{a1},{a2},{a3})" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot01"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(CAP,{readCap},{writeCap})" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot02"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(JOB,{req1},{req2},{req3})" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot03"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="root=u" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot04"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="rootScope=CAP" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot05"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="parent={a1 ↦ u,a2 ↦ a1,a3 ↦ a1}" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot06"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="rank={u ↦ 0,a1 ↦ 1,a2 ↦ 2,a3 ↦ 2}" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot07"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="path={u ↦ {u},a1 ↦ {u,a1},a2 ↦ {u,a1,a2},a3 ↦ {u,a1,a3}}" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot08"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="owner={req1 ↦ a1,req2 ↦ a2,req3 ↦ a3}" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot09"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="need={req1 ↦ readCap,req2 ↦ writeCap,req3 ↦ readCap}" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot10"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="budget=2" org.eventb.core.source="/DelegatedAuthorization/C_Pilot.buc|org.eventb.core.contextFile#C_Pilot|org.eventb.core.axiom#pilot11"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

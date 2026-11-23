@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="CAP" org.eventb.core.type="ℙ(CAP)"/>
+        <org.eventb.core.poIdentifier name="NODE" org.eventb.core.type="ℙ(NODE)"/>
+        <org.eventb.core.poIdentifier name="JOB" org.eventb.core.type="ℙ(JOB)"/>
+        <org.eventb.core.poIdentifier name="need" org.eventb.core.type="ℙ(JOB×CAP)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="NODE"/>
+        <org.eventb.core.poIdentifier name="rootScope" org.eventb.core.type="ℙ(CAP)"/>
+        <org.eventb.core.poIdentifier name="budget" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="parent" org.eventb.core.type="ℙ(NODE×NODE)"/>
+        <org.eventb.core.poIdentifier name="path" org.eventb.core.type="ℙ(NODE×ℙ(NODE))"/>
+        <org.eventb.core.poIdentifier name="rank" org.eventb.core.type="ℙ(NODE×ℤ)"/>
+        <org.eventb.core.poIdentifier name="owner" org.eventb.core.type="ℙ(JOB×NODE)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm09/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP."/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="root∈dom(rank)∧rank∈NODE ⇸ ℤ" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm09"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm09"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP."/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP\/"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒a∈dom(parent)∧parent∈NODE ⇸ NODE∧parent(a)∈dom(rank)∧rank∈NODE ⇸ ℤ∧a∈dom(rank)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP\/"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP1"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="root∈dom(path)∧path∈NODE ⇸ ℙ(NODE)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP2"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒a∈dom(path)∧path∈NODE ⇸ ℙ(NODE)∧a∈dom(parent)∧parent∈NODE ⇸ NODE∧parent(a)∈dom(path)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYP." org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(NODE)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm01"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(CAP)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm02"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(JOB)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm03"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="root∈NODE" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm04"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="rootScope⊆CAP" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm05"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="rootScope≠(∅ ⦂ ℙ(CAP))" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm06"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="parent∈NODE ∖ {root} → NODE" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm07"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="rank∈NODE → ℕ" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm08"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP/" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP." org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="rank(root)=0" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm09"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP\/" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒rank(parent(a))&lt;rank(a)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="path∈NODE → ℙ(NODE)" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm11"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="path(root)={root}" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm12"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/DelegatedAuthorization/C_Delegation.bpo|org.eventb.core.poFile#C_Delegation|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀a⦂NODE·a∈NODE ∖ {root}⇒path(a)={a}∪path(parent(a))" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="owner∈JOB → NODE ∖ {root}" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm14"/>
+        <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="need∈JOB → CAP" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm15"/>
+        <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="budget∈ℕ1" org.eventb.core.source="/DelegatedAuthorization/C_Delegation.buc|org.eventb.core.contextFile#C_Delegation|org.eventb.core.axiom#axm16"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
