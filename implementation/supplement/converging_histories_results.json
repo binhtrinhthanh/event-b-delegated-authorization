@@ -1,0 +1,49 @@
+{
+  "prefix_cap_per_state": 8,
+  "configurations": {
+    "chain_budget1": {
+      "reachable_oracle_states": 422,
+      "retained_prefix_histogram": {
+        "1": 85,
+        "2": 86,
+        "3": 16,
+        "4": 35,
+        "5": 8,
+        "6": 24,
+        "7": 28,
+        "8": 140
+      },
+      "convergent_states_tested": 337,
+      "prefixes_tested": 1860,
+      "alternative_prefixes_beyond_first": 1523,
+      "candidate_commands_per_prefix": 21,
+      "command_trials": 39060,
+      "accepted_trials": 3218,
+      "rejected_trials": 35842,
+      "mismatches": 0,
+      "seconds": 6.194
+    },
+    "star_budget2": {
+      "reachable_oracle_states": 1058,
+      "retained_prefix_histogram": {
+        "1": 56,
+        "2": 40,
+        "3": 42,
+        "4": 44,
+        "5": 54,
+        "6": 41,
+        "7": 12,
+        "8": 769
+      },
+      "convergent_states_tested": 1002,
+      "prefixes_tested": 7134,
+      "alternative_prefixes_beyond_first": 6132,
+      "candidate_commands_per_prefix": 21,
+      "command_trials": 149814,
+      "accepted_trials": 17122,
+      "rejected_trials": 132692,
+      "mismatches": 0,
+      "seconds": 24.422
+    }
+  }
+}
