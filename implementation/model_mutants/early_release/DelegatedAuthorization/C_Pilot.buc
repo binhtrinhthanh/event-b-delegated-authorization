@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+  <org.eventb.core.extendsContext name="extends" org.eventb.core.target="C_Delegation" />
+  <org.eventb.core.constant name="c0" org.eventb.core.identifier="u" />
+  <org.eventb.core.constant name="c1" org.eventb.core.identifier="a1" />
+  <org.eventb.core.constant name="c2" org.eventb.core.identifier="a2" />
+  <org.eventb.core.constant name="c3" org.eventb.core.identifier="a3" />
+  <org.eventb.core.constant name="c4" org.eventb.core.identifier="readCap" />
+  <org.eventb.core.constant name="c5" org.eventb.core.identifier="writeCap" />
+  <org.eventb.core.constant name="c6" org.eventb.core.identifier="req1" />
+  <org.eventb.core.constant name="c7" org.eventb.core.identifier="req2" />
+  <org.eventb.core.constant name="c8" org.eventb.core.identifier="req3" />
+  <org.eventb.core.axiom name="pilot01" org.eventb.core.label="pilot01" org.eventb.core.predicate="partition(NODE, {u}, {a1}, {a2}, {a3})" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot02" org.eventb.core.label="pilot02" org.eventb.core.predicate="partition(CAP, {readCap}, {writeCap})" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot03" org.eventb.core.label="pilot03" org.eventb.core.predicate="partition(JOB, {req1}, {req2}, {req3})" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot04" org.eventb.core.label="pilot04" org.eventb.core.predicate="root = u" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot05" org.eventb.core.label="pilot05" org.eventb.core.predicate="rootScope = CAP" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot06" org.eventb.core.label="pilot06" org.eventb.core.predicate="parent = {a1 ↦ u, a2 ↦ a1, a3 ↦ a1}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot07" org.eventb.core.label="pilot07" org.eventb.core.predicate="rank = {u ↦ 0, a1 ↦ 1, a2 ↦ 2, a3 ↦ 2}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot08" org.eventb.core.label="pilot08" org.eventb.core.predicate="path = {u ↦ {u}, a1 ↦ {u,a1}, a2 ↦ {u,a1,a2}, a3 ↦ {u,a1,a3}}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot09" org.eventb.core.label="pilot09" org.eventb.core.predicate="owner = {req1 ↦ a1, req2 ↦ a2, req3 ↦ a3}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot10" org.eventb.core.label="pilot10" org.eventb.core.predicate="need = {req1 ↦ readCap, req2 ↦ writeCap, req3 ↦ readCap}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="pilot11" org.eventb.core.label="pilot11" org.eventb.core.predicate="budget = 2" org.eventb.core.theorem="false" />
+</org.eventb.core.contextFile>

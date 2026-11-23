@@ -1,0 +1,53 @@
+{
+  "mutant": "replay_commit",
+  "static_errors": 0,
+  "requirements_unchanged": true,
+  "open_pos": [
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReplayCommit/inv22a/INV"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReplayCommit/inv23/INV"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReplayCommit/VAR"
+    }
+  ],
+  "total_open": 3,
+  "components": [
+    {
+      "component": "C_Delegation",
+      "total": 4,
+      "open": 0
+    },
+    {
+      "component": "C_Pilot",
+      "total": 0,
+      "open": 0
+    },
+    {
+      "component": "M0_AuthorityLedger",
+      "total": 36,
+      "open": 0
+    },
+    {
+      "component": "M1_DelegationChain",
+      "total": 33,
+      "open": 0
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "total": 43,
+      "open": 3
+    },
+    {
+      "component": "M3_Pilot",
+      "total": 0,
+      "open": 0
+    }
+  ],
+  "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+}

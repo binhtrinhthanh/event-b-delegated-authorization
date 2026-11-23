@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+  <org.eventb.core.refinesMachine name="ref" org.eventb.core.target="M1_DelegationChain" />
+  <org.eventb.core.seesContext name="see" org.eventb.core.target="C_Delegation" />
+  <org.eventb.core.variable name="v0" org.eventb.core.identifier="auth" />
+  <org.eventb.core.variable name="v1" org.eventb.core.identifier="pending" />
+  <org.eventb.core.variable name="v2" org.eventb.core.identifier="committed" />
+  <org.eventb.core.variable name="v3" org.eventb.core.identifier="cancelled" />
+  <org.eventb.core.variable name="v4" org.eventb.core.identifier="used" />
+  <org.eventb.core.variable name="v5" org.eventb.core.identifier="issued" />
+  <org.eventb.core.variable name="v6" org.eventb.core.identifier="scope" />
+  <org.eventb.core.variable name="v7" org.eventb.core.identifier="revoked" />
+  <org.eventb.core.variable name="v8" org.eventb.core.identifier="submitted" />
+  <org.eventb.core.variable name="v9" org.eventb.core.identifier="effectCount" />
+  <org.eventb.core.variable name="v10" org.eventb.core.identifier="badUse" />
+  <org.eventb.core.invariant name="inv20" org.eventb.core.label="inv20" org.eventb.core.predicate="submitted ⊆ pending" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv21" org.eventb.core.label="inv21" org.eventb.core.predicate="effectCount ∈ JOB → ℕ" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv22a" org.eventb.core.label="inv22a" org.eventb.core.predicate="∀j · j ∈ committed ⇒ effectCount(j) = 1" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv22b" org.eventb.core.label="inv22b" org.eventb.core.predicate="∀j · j ∈ JOB ∖ committed ⇒ effectCount(j) = 0" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv23" org.eventb.core.label="inv23" org.eventb.core.predicate="∀j · j ∈ JOB ⇒ effectCount(j) ≤ 1" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv24" org.eventb.core.label="inv24" org.eventb.core.predicate="badUse ∈ BOOL" org.eventb.core.theorem="false" />
+  <org.eventb.core.invariant name="inv25" org.eventb.core.label="inv25" org.eventb.core.predicate="badUse = FALSE" org.eventb.core.theorem="false" />
+  <org.eventb.core.variant name="variant" org.eventb.core.expression="card(pending ∖ submitted)" />
+  <org.eventb.core.event name="e0" org.eventb.core.label="INITIALISATION" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="auth ≔ {root} × rootScope" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="pending ≔ ∅" />
+    <org.eventb.core.action name="a2" org.eventb.core.label="act3" org.eventb.core.assignment="committed ≔ ∅" />
+    <org.eventb.core.action name="a3" org.eventb.core.label="act4" org.eventb.core.assignment="cancelled ≔ ∅" />
+    <org.eventb.core.action name="a4" org.eventb.core.label="act5" org.eventb.core.assignment="used ≔ 0" />
+    <org.eventb.core.action name="a5" org.eventb.core.label="act6" org.eventb.core.assignment="issued ≔ {root}" />
+    <org.eventb.core.action name="a6" org.eventb.core.label="act7" org.eventb.core.assignment="scope ≔ {root} × rootScope" />
+    <org.eventb.core.action name="a7" org.eventb.core.label="act8" org.eventb.core.assignment="revoked ≔ ∅" />
+    <org.eventb.core.action name="a8" org.eventb.core.label="act9" org.eventb.core.assignment="submitted ≔ ∅" />
+    <org.eventb.core.action name="a9" org.eventb.core.label="act10" org.eventb.core.assignment="effectCount ≔ JOB × {0}" />
+    <org.eventb.core.action name="a10" org.eventb.core.label="act11" org.eventb.core.assignment="badUse ≔ FALSE" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e1" org.eventb.core.label="Delegate" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.refinesEvent name="ref" org.eventb.core.target="Delegate" />
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="a" />
+    <org.eventb.core.parameter name="p1" org.eventb.core.identifier="S" />
+    <org.eventb.core.parameter name="p2" org.eventb.core.identifier="P" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="a ∈ NODE ∖ issued" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="a ∈ NODE ∖ {root}" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g2" org.eventb.core.label="grd3" org.eventb.core.predicate="parent(a) ∈ issued" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g3" org.eventb.core.label="grd4" org.eventb.core.predicate="path(parent(a)) ∩ revoked = ∅" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g5" org.eventb.core.label="grd6" org.eventb.core.predicate="S ⊆ CAP" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g6" org.eventb.core.label="grd7" org.eventb.core.predicate="S ≠ ∅" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g7" org.eventb.core.label="grd8" org.eventb.core.predicate="P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}" org.eventb.core.theorem="false" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="auth ≔ P" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="issued ≔ issued ∪ {a}" />
+    <org.eventb.core.action name="a2" org.eventb.core.label="act3" org.eventb.core.assignment="scope ≔ scope ∪ ({a} × S)" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e2" org.eventb.core.label="Revoke" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.refinesEvent name="ref" org.eventb.core.target="Revoke" />
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="a" />
+    <org.eventb.core.parameter name="p1" org.eventb.core.identifier="P" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="a ∈ issued ∖ revoked" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}" org.eventb.core.theorem="false" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="auth ≔ P" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="revoked ≔ revoked ∪ {a}" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e3" org.eventb.core.label="Reserve" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.refinesEvent name="ref" org.eventb.core.target="Reserve" />
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="j" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="owner(j) ↦ need(j) ∈ auth" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g2" org.eventb.core.label="grd3" org.eventb.core.predicate="used &lt; budget" org.eventb.core.theorem="false" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="pending ≔ pending ∪ {j}" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="used ≔ used + 1" />
+    <org.eventb.core.action name="a2" org.eventb.core.label="act3" org.eventb.core.assignment="badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e4" org.eventb.core.label="Submit" org.eventb.core.convergence="1" org.eventb.core.extended="false">
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="j" />
+    <org.eventb.core.parameter name="p1" org.eventb.core.identifier="T" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="j ∈ pending ∖ submitted" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="owner(j) ↦ need(j) ∈ auth" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g2" org.eventb.core.label="grd3" org.eventb.core.predicate="T = (pending ∖ submitted) ∖ {j}" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g3" org.eventb.core.label="grd4" org.eventb.core.predicate="pending ∖ submitted = T ∪ {j}" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g4" org.eventb.core.label="grd5" org.eventb.core.predicate="j ∉ T" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g5" org.eventb.core.label="grd6" org.eventb.core.predicate="pending ∖ (submitted ∪ {j}) = T" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g6" org.eventb.core.label="grd7" org.eventb.core.predicate="finite(T)" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g7" org.eventb.core.label="grd8" org.eventb.core.predicate="card(pending ∖ submitted) = card(T) + 1" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g8" org.eventb.core.label="grd9" org.eventb.core.predicate="card(pending ∖ (submitted ∪ {j})) = card(T)" org.eventb.core.theorem="true" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="submitted ≔ submitted ∪ {j}" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e5" org.eventb.core.label="Commit" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.refinesEvent name="ref" org.eventb.core.target="Commit" />
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="j" />
+    <org.eventb.core.parameter name="p1" org.eventb.core.identifier="R" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="j ∈ pending" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="owner(j) ↦ need(j) ∈ auth" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g2" org.eventb.core.label="grd3" org.eventb.core.predicate="R = pending ∖ {j}" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g3" org.eventb.core.label="grd4" org.eventb.core.predicate="pending = R ∪ {j}" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g4" org.eventb.core.label="grd5" org.eventb.core.predicate="j ∉ R" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g5" org.eventb.core.label="grd6" org.eventb.core.predicate="finite(R)" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g6" org.eventb.core.label="grd7" org.eventb.core.predicate="j ∈ submitted" org.eventb.core.theorem="false" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="pending ≔ R" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="committed ≔ committed ∪ {j}" />
+    <org.eventb.core.action name="a2" org.eventb.core.label="act3" org.eventb.core.assignment="submitted ≔ submitted ∖ {j}" />
+    <org.eventb.core.action name="a3" org.eventb.core.label="act4" org.eventb.core.assignment="effectCount(j) ≔ effectCount(j) + 1" />
+    <org.eventb.core.action name="a4" org.eventb.core.label="act5" org.eventb.core.assignment="badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)" />
+  </org.eventb.core.event>
+  <org.eventb.core.event name="e6" org.eventb.core.label="CancelConfirmed" org.eventb.core.convergence="0" org.eventb.core.extended="false">
+    <org.eventb.core.refinesEvent name="ref" org.eventb.core.target="CancelConfirmed" />
+    <org.eventb.core.parameter name="p0" org.eventb.core.identifier="j" />
+    <org.eventb.core.parameter name="p1" org.eventb.core.identifier="R" />
+    <org.eventb.core.guard name="g0" org.eventb.core.label="grd1" org.eventb.core.predicate="j ∈ pending" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g1" org.eventb.core.label="grd2" org.eventb.core.predicate="R = pending ∖ {j}" org.eventb.core.theorem="false" />
+    <org.eventb.core.guard name="g2" org.eventb.core.label="grd3" org.eventb.core.predicate="pending = R ∪ {j}" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g3" org.eventb.core.label="grd4" org.eventb.core.predicate="j ∉ R" org.eventb.core.theorem="true" />
+    <org.eventb.core.guard name="g4" org.eventb.core.label="grd5" org.eventb.core.predicate="finite(R)" org.eventb.core.theorem="true" />
+    <org.eventb.core.action name="a0" org.eventb.core.label="act1" org.eventb.core.assignment="pending ≔ R" />
+    <org.eventb.core.action name="a1" org.eventb.core.label="act2" org.eventb.core.assignment="cancelled ≔ cancelled ∪ {j}" />
+    <org.eventb.core.action name="a2" org.eventb.core.label="act3" org.eventb.core.assignment="used ≔ used − 1" />
+    <org.eventb.core.action name="a3" org.eventb.core.label="act4" org.eventb.core.assignment="submitted ≔ submitted ∖ {j}" />
+  </org.eventb.core.event>
+</org.eventb.core.machineFile>

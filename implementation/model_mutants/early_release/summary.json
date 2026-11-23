@@ -1,0 +1,57 @@
+{
+  "mutant": "early_release",
+  "static_errors": 0,
+  "requirements_unchanged": true,
+  "open_pos": [
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReleaseUnconfirmed/inv20/INV"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReleaseUnconfirmed/used/EQL"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReleaseUnconfirmed/pending/EQL"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "ReleaseUnconfirmed/VAR"
+    }
+  ],
+  "total_open": 4,
+  "components": [
+    {
+      "component": "C_Delegation",
+      "total": 4,
+      "open": 0
+    },
+    {
+      "component": "C_Pilot",
+      "total": 0,
+      "open": 0
+    },
+    {
+      "component": "M0_AuthorityLedger",
+      "total": 36,
+      "open": 0
+    },
+    {
+      "component": "M1_DelegationChain",
+      "total": 33,
+      "open": 0
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "total": 41,
+      "open": 4
+    },
+    {
+      "component": "M3_Pilot",
+      "total": 0,
+      "open": 0
+    }
+  ],
+  "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+}

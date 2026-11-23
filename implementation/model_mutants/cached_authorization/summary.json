@@ -1,0 +1,49 @@
+{
+  "mutant": "cached_authorization",
+  "static_errors": 0,
+  "requirements_unchanged": true,
+  "open_pos": [
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "Commit/inv25/INV"
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "po": "Commit/grd2/GRD"
+    }
+  ],
+  "total_open": 2,
+  "components": [
+    {
+      "component": "C_Delegation",
+      "total": 4,
+      "open": 0
+    },
+    {
+      "component": "C_Pilot",
+      "total": 0,
+      "open": 0
+    },
+    {
+      "component": "M0_AuthorityLedger",
+      "total": 36,
+      "open": 0
+    },
+    {
+      "component": "M1_DelegationChain",
+      "total": 33,
+      "open": 0
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "total": 40,
+      "open": 2
+    },
+    {
+      "component": "M3_Pilot",
+      "total": 0,
+      "open": 0
+    }
+  ],
+  "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+}
