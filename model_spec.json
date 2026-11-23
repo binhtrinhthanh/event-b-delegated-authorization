@@ -1,0 +1,908 @@
+{
+  "sets": [
+    "NODE",
+    "CAP",
+    "JOB"
+  ],
+  "constants": [
+    "root",
+    "rootScope",
+    "parent",
+    "rank",
+    "path",
+    "owner",
+    "need",
+    "budget"
+  ],
+  "axioms": [
+    [
+      "axm01",
+      "finite(NODE)"
+    ],
+    [
+      "axm02",
+      "finite(CAP)"
+    ],
+    [
+      "axm03",
+      "finite(JOB)"
+    ],
+    [
+      "axm04",
+      "root ∈ NODE"
+    ],
+    [
+      "axm05",
+      "rootScope ⊆ CAP"
+    ],
+    [
+      "axm06",
+      "rootScope ≠ ∅"
+    ],
+    [
+      "axm07",
+      "parent ∈ (NODE ∖ {root}) → NODE"
+    ],
+    [
+      "axm08",
+      "rank ∈ NODE → ℕ"
+    ],
+    [
+      "axm09",
+      "rank(root) = 0"
+    ],
+    [
+      "axm10",
+      "∀a · a ∈ NODE ∖ {root} ⇒ rank(parent(a)) < rank(a)"
+    ],
+    [
+      "axm11",
+      "path ∈ NODE → ℙ(NODE)"
+    ],
+    [
+      "axm12",
+      "path(root) = {root}"
+    ],
+    [
+      "axm13",
+      "∀a · a ∈ NODE ∖ {root} ⇒ path(a) = {a} ∪ path(parent(a))"
+    ],
+    [
+      "axm14",
+      "owner ∈ JOB → (NODE ∖ {root})"
+    ],
+    [
+      "axm15",
+      "need ∈ JOB → CAP"
+    ],
+    [
+      "axm16",
+      "budget ∈ ℕ1"
+    ]
+  ],
+  "pilot_constants": [
+    "u",
+    "a1",
+    "a2",
+    "a3",
+    "readCap",
+    "writeCap",
+    "req1",
+    "req2",
+    "req3"
+  ],
+  "pilot_axioms": [
+    [
+      "pilot01",
+      "partition(NODE, {u}, {a1}, {a2}, {a3})"
+    ],
+    [
+      "pilot02",
+      "partition(CAP, {readCap}, {writeCap})"
+    ],
+    [
+      "pilot03",
+      "partition(JOB, {req1}, {req2}, {req3})"
+    ],
+    [
+      "pilot04",
+      "root = u"
+    ],
+    [
+      "pilot05",
+      "rootScope = CAP"
+    ],
+    [
+      "pilot06",
+      "parent = {a1 ↦ u, a2 ↦ a1, a3 ↦ a1}"
+    ],
+    [
+      "pilot07",
+      "rank = {u ↦ 0, a1 ↦ 1, a2 ↦ 2, a3 ↦ 2}"
+    ],
+    [
+      "pilot08",
+      "path = {u ↦ {u}, a1 ↦ {u,a1}, a2 ↦ {u,a1,a2}, a3 ↦ {u,a1,a3}}"
+    ],
+    [
+      "pilot09",
+      "owner = {req1 ↦ a1, req2 ↦ a2, req3 ↦ a3}"
+    ],
+    [
+      "pilot10",
+      "need = {req1 ↦ readCap, req2 ↦ writeCap, req3 ↦ readCap}"
+    ],
+    [
+      "pilot11",
+      "budget = 2"
+    ]
+  ],
+  "models": [
+    {
+      "name": "M0_AuthorityLedger",
+      "ref": null,
+      "variables": [
+        "auth",
+        "pending",
+        "committed",
+        "cancelled",
+        "used"
+      ],
+      "invariants": [
+        [
+          "inv01",
+          "auth ⊆ NODE × CAP"
+        ],
+        [
+          "inv02",
+          "pending ⊆ JOB"
+        ],
+        [
+          "inv02f",
+          "finite(pending)"
+        ],
+        [
+          "inv03",
+          "committed ⊆ JOB"
+        ],
+        [
+          "inv03f",
+          "finite(committed)"
+        ],
+        [
+          "inv04",
+          "cancelled ⊆ JOB"
+        ],
+        [
+          "inv05",
+          "pending ∩ committed = ∅"
+        ],
+        [
+          "inv06",
+          "pending ∩ cancelled = ∅"
+        ],
+        [
+          "inv07",
+          "committed ∩ cancelled = ∅"
+        ],
+        [
+          "inv08",
+          "used ∈ ℕ"
+        ],
+        [
+          "inv09",
+          "used = card(pending) + card(committed)"
+        ],
+        [
+          "inv10",
+          "used ≤ budget"
+        ]
+      ],
+      "events": [
+        {
+          "name": "INITIALISATION",
+          "params": [],
+          "guards": [],
+          "actions": [
+            "auth ≔ {root} × rootScope",
+            "pending ≔ ∅",
+            "committed ≔ ∅",
+            "cancelled ≔ ∅",
+            "used ≔ 0"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "SetAuthority",
+          "params": [
+            "P"
+          ],
+          "guards": [
+            "P ⊆ NODE × CAP"
+          ],
+          "actions": [
+            "auth ≔ P"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "Reserve",
+          "params": [
+            "j"
+          ],
+          "guards": [
+            "j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)",
+            "owner(j) ↦ need(j) ∈ auth",
+            "used < budget"
+          ],
+          "actions": [
+            "pending ≔ pending ∪ {j}",
+            "used ≔ used + 1"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "Commit",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "owner(j) ↦ need(j) ∈ auth",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "committed ≔ committed ∪ {j}"
+          ],
+          "ref": null,
+          "convergent": false,
+          "theorem_guards": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "CancelConfirmed",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "cancelled ≔ cancelled ∪ {j}",
+            "used ≔ used − 1"
+          ],
+          "ref": null,
+          "convergent": false,
+          "theorem_guards": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M1_DelegationChain",
+      "ref": "M0_AuthorityLedger",
+      "variables": [
+        "auth",
+        "pending",
+        "committed",
+        "cancelled",
+        "used",
+        "issued",
+        "scope",
+        "revoked"
+      ],
+      "invariants": [
+        [
+          "inv11",
+          "issued ⊆ NODE"
+        ],
+        [
+          "inv12",
+          "root ∈ issued"
+        ],
+        [
+          "inv13",
+          "scope ⊆ NODE × CAP"
+        ],
+        [
+          "inv13d",
+          "dom(scope) = issued"
+        ],
+        [
+          "inv13b",
+          "∀a · a ∈ NODE ∖ issued ⇒ scope[{a}] = ∅"
+        ],
+        [
+          "inv14",
+          "scope[{root}] = rootScope"
+        ],
+        [
+          "inv15",
+          "revoked ⊆ issued"
+        ],
+        [
+          "inv16",
+          "∀a · a ∈ issued ⇒ path(a) ⊆ issued"
+        ],
+        [
+          "inv16b",
+          "∀a · a ∈ issued ∖ {root} ⇒ parent(a) ∈ issued"
+        ],
+        [
+          "inv17",
+          "∀a · a ∈ issued ∖ {root} ⇒ scope[{a}] ⊆ scope[{parent(a)}]"
+        ],
+        [
+          "inv18",
+          "∀a · a ∈ issued ⇒ scope[{a}] ≠ ∅"
+        ],
+        [
+          "inv18b",
+          "∀a · a ∈ issued ⇒ scope[{a}] ⊆ rootScope"
+        ],
+        [
+          "inv19",
+          "auth = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}"
+        ]
+      ],
+      "events": [
+        {
+          "name": "INITIALISATION",
+          "params": [],
+          "guards": [],
+          "actions": [
+            "auth ≔ {root} × rootScope",
+            "pending ≔ ∅",
+            "committed ≔ ∅",
+            "cancelled ≔ ∅",
+            "used ≔ 0",
+            "issued ≔ {root}",
+            "scope ≔ {root} × rootScope",
+            "revoked ≔ ∅"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "Delegate",
+          "params": [
+            "a",
+            "S",
+            "P"
+          ],
+          "guards": [
+            "a ∈ NODE ∖ issued",
+            "a ∈ NODE ∖ {root}",
+            "parent(a) ∈ issued",
+            "path(parent(a)) ∩ revoked = ∅",
+            "S ⊆ scope[{parent(a)}]",
+            "S ⊆ CAP",
+            "S ≠ ∅",
+            "P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "issued ≔ issued ∪ {a}",
+            "scope ≔ scope ∪ ({a} × S)"
+          ],
+          "ref": "SetAuthority",
+          "convergent": false
+        },
+        {
+          "name": "Revoke",
+          "params": [
+            "a",
+            "P"
+          ],
+          "guards": [
+            "a ∈ issued ∖ revoked",
+            "P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "revoked ≔ revoked ∪ {a}"
+          ],
+          "ref": "SetAuthority",
+          "convergent": false
+        },
+        {
+          "name": "Reserve",
+          "params": [
+            "j"
+          ],
+          "guards": [
+            "j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)",
+            "owner(j) ↦ need(j) ∈ auth",
+            "used < budget"
+          ],
+          "actions": [
+            "pending ≔ pending ∪ {j}",
+            "used ≔ used + 1"
+          ],
+          "ref": "Reserve",
+          "convergent": false
+        },
+        {
+          "name": "Commit",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "owner(j) ↦ need(j) ∈ auth",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "committed ≔ committed ∪ {j}"
+          ],
+          "ref": "Commit",
+          "convergent": false,
+          "theorem_guards": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "CancelConfirmed",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "cancelled ≔ cancelled ∪ {j}",
+            "used ≔ used − 1"
+          ],
+          "ref": "CancelConfirmed",
+          "convergent": false,
+          "theorem_guards": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M2_SubmittedObligations",
+      "ref": "M1_DelegationChain",
+      "variables": [
+        "auth",
+        "pending",
+        "committed",
+        "cancelled",
+        "used",
+        "issued",
+        "scope",
+        "revoked",
+        "submitted",
+        "effectCount",
+        "badUse"
+      ],
+      "variant": "card(pending ∖ submitted)",
+      "invariants": [
+        [
+          "inv20",
+          "submitted ⊆ pending"
+        ],
+        [
+          "inv21",
+          "effectCount ∈ JOB → ℕ"
+        ],
+        [
+          "inv22a",
+          "∀j · j ∈ committed ⇒ effectCount(j) = 1"
+        ],
+        [
+          "inv22b",
+          "∀j · j ∈ JOB ∖ committed ⇒ effectCount(j) = 0"
+        ],
+        [
+          "inv23",
+          "∀j · j ∈ JOB ⇒ effectCount(j) ≤ 1"
+        ],
+        [
+          "inv24",
+          "badUse ∈ BOOL"
+        ],
+        [
+          "inv25",
+          "badUse = FALSE"
+        ]
+      ],
+      "events": [
+        {
+          "name": "INITIALISATION",
+          "params": [],
+          "guards": [],
+          "actions": [
+            "auth ≔ {root} × rootScope",
+            "pending ≔ ∅",
+            "committed ≔ ∅",
+            "cancelled ≔ ∅",
+            "used ≔ 0",
+            "issued ≔ {root}",
+            "scope ≔ {root} × rootScope",
+            "revoked ≔ ∅",
+            "submitted ≔ ∅",
+            "effectCount ≔ JOB × {0}",
+            "badUse ≔ FALSE"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "Delegate",
+          "params": [
+            "a",
+            "S",
+            "P"
+          ],
+          "guards": [
+            "a ∈ NODE ∖ issued",
+            "a ∈ NODE ∖ {root}",
+            "parent(a) ∈ issued",
+            "path(parent(a)) ∩ revoked = ∅",
+            "S ⊆ scope[{parent(a)}]",
+            "S ⊆ CAP",
+            "S ≠ ∅",
+            "P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "issued ≔ issued ∪ {a}",
+            "scope ≔ scope ∪ ({a} × S)"
+          ],
+          "ref": "Delegate",
+          "convergent": false
+        },
+        {
+          "name": "Revoke",
+          "params": [
+            "a",
+            "P"
+          ],
+          "guards": [
+            "a ∈ issued ∖ revoked",
+            "P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "revoked ≔ revoked ∪ {a}"
+          ],
+          "ref": "Revoke",
+          "convergent": false
+        },
+        {
+          "name": "Reserve",
+          "params": [
+            "j"
+          ],
+          "guards": [
+            "j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)",
+            "owner(j) ↦ need(j) ∈ auth",
+            "used < budget"
+          ],
+          "actions": [
+            "pending ≔ pending ∪ {j}",
+            "used ≔ used + 1",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": "Reserve",
+          "convergent": false
+        },
+        {
+          "name": "Submit",
+          "params": [
+            "j",
+            "T"
+          ],
+          "guards": [
+            "j ∈ pending ∖ submitted",
+            "owner(j) ↦ need(j) ∈ auth",
+            "T = (pending ∖ submitted) ∖ {j}",
+            "pending ∖ submitted = T ∪ {j}",
+            "j ∉ T",
+            "pending ∖ (submitted ∪ {j}) = T",
+            "finite(T)",
+            "card(pending ∖ submitted) = card(T) + 1",
+            "card(pending ∖ (submitted ∪ {j})) = card(T)"
+          ],
+          "actions": [
+            "submitted ≔ submitted ∪ {j}",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": null,
+          "convergent": true,
+          "theorem_guards": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "name": "Commit",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "owner(j) ↦ need(j) ∈ auth",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)",
+            "j ∈ submitted"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "committed ≔ committed ∪ {j}",
+            "submitted ≔ submitted ∖ {j}",
+            "effectCount(j) ≔ effectCount(j) + 1",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": "Commit",
+          "convergent": false,
+          "theorem_guards": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "CancelConfirmed",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "cancelled ≔ cancelled ∪ {j}",
+            "used ≔ used − 1",
+            "submitted ≔ submitted ∖ {j}"
+          ],
+          "ref": "CancelConfirmed",
+          "convergent": false,
+          "theorem_guards": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M3_Pilot",
+      "ref": "M2_SubmittedObligations",
+      "variables": [
+        "auth",
+        "pending",
+        "committed",
+        "cancelled",
+        "used",
+        "issued",
+        "scope",
+        "revoked",
+        "submitted",
+        "effectCount",
+        "badUse"
+      ],
+      "invariants": [],
+      "events": [
+        {
+          "name": "INITIALISATION",
+          "params": [],
+          "guards": [],
+          "actions": [
+            "auth ≔ {root} × rootScope",
+            "pending ≔ ∅",
+            "committed ≔ ∅",
+            "cancelled ≔ ∅",
+            "used ≔ 0",
+            "issued ≔ {root}",
+            "scope ≔ {root} × rootScope",
+            "revoked ≔ ∅",
+            "submitted ≔ ∅",
+            "effectCount ≔ JOB × {0}",
+            "badUse ≔ FALSE"
+          ],
+          "ref": null,
+          "convergent": false
+        },
+        {
+          "name": "Delegate",
+          "params": [
+            "a",
+            "S",
+            "P"
+          ],
+          "guards": [
+            "a ∈ NODE ∖ issued",
+            "a ∈ NODE ∖ {root}",
+            "parent(a) ∈ issued",
+            "path(parent(a)) ∩ revoked = ∅",
+            "S ⊆ scope[{parent(a)}]",
+            "S ⊆ CAP",
+            "S ≠ ∅",
+            "P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "issued ≔ issued ∪ {a}",
+            "scope ≔ scope ∪ ({a} × S)"
+          ],
+          "ref": "Delegate",
+          "convergent": false
+        },
+        {
+          "name": "Revoke",
+          "params": [
+            "a",
+            "P"
+          ],
+          "guards": [
+            "a ∈ issued ∖ revoked",
+            "P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}"
+          ],
+          "actions": [
+            "auth ≔ P",
+            "revoked ≔ revoked ∪ {a}"
+          ],
+          "ref": "Revoke",
+          "convergent": false
+        },
+        {
+          "name": "Reserve",
+          "params": [
+            "j"
+          ],
+          "guards": [
+            "j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)",
+            "owner(j) ↦ need(j) ∈ auth",
+            "used < budget"
+          ],
+          "actions": [
+            "pending ≔ pending ∪ {j}",
+            "used ≔ used + 1",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": "Reserve",
+          "convergent": false
+        },
+        {
+          "name": "Submit",
+          "params": [
+            "j",
+            "T"
+          ],
+          "guards": [
+            "j ∈ pending ∖ submitted",
+            "owner(j) ↦ need(j) ∈ auth",
+            "T = (pending ∖ submitted) ∖ {j}",
+            "pending ∖ submitted = T ∪ {j}",
+            "j ∉ T",
+            "pending ∖ (submitted ∪ {j}) = T",
+            "finite(T)",
+            "card(pending ∖ submitted) = card(T) + 1",
+            "card(pending ∖ (submitted ∪ {j})) = card(T)"
+          ],
+          "actions": [
+            "submitted ≔ submitted ∪ {j}",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": "Submit",
+          "convergent": true,
+          "theorem_guards": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "name": "Commit",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "owner(j) ↦ need(j) ∈ auth",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)",
+            "j ∈ submitted"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "committed ≔ committed ∪ {j}",
+            "submitted ≔ submitted ∖ {j}",
+            "effectCount(j) ≔ effectCount(j) + 1",
+            "badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)"
+          ],
+          "ref": "Commit",
+          "convergent": false,
+          "theorem_guards": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "name": "CancelConfirmed",
+          "params": [
+            "j",
+            "R"
+          ],
+          "guards": [
+            "j ∈ pending",
+            "R = pending ∖ {j}",
+            "pending = R ∪ {j}",
+            "j ∉ R",
+            "finite(R)"
+          ],
+          "actions": [
+            "pending ≔ R",
+            "cancelled ≔ cancelled ∪ {j}",
+            "used ≔ used − 1",
+            "submitted ≔ submitted ∖ {j}"
+          ],
+          "ref": "CancelConfirmed",
+          "convergent": false,
+          "theorem_guards": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    }
+  ]
+}
