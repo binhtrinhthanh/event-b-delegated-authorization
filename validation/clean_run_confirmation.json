@@ -1,0 +1,18 @@
+[
+  {
+    "run": "delegated-auto-run13",
+    "total": 109,
+    "automatic": 109,
+    "manual": 0,
+    "open": 0,
+    "source_match": true
+  },
+  {
+    "run": "delegated-auto-clean",
+    "total": 109,
+    "automatic": 109,
+    "manual": 0,
+    "open": 0,
+    "source_match": true
+  }
+]

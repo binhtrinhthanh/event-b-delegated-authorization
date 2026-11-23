@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+  <org.eventb.core.carrierSet name="s0" org.eventb.core.identifier="NODE" />
+  <org.eventb.core.carrierSet name="s1" org.eventb.core.identifier="CAP" />
+  <org.eventb.core.carrierSet name="s2" org.eventb.core.identifier="JOB" />
+  <org.eventb.core.constant name="c0" org.eventb.core.identifier="root" />
+  <org.eventb.core.constant name="c1" org.eventb.core.identifier="rootScope" />
+  <org.eventb.core.constant name="c2" org.eventb.core.identifier="parent" />
+  <org.eventb.core.constant name="c3" org.eventb.core.identifier="rank" />
+  <org.eventb.core.constant name="c4" org.eventb.core.identifier="path" />
+  <org.eventb.core.constant name="c5" org.eventb.core.identifier="owner" />
+  <org.eventb.core.constant name="c6" org.eventb.core.identifier="need" />
+  <org.eventb.core.constant name="c7" org.eventb.core.identifier="budget" />
+  <org.eventb.core.axiom name="axm01" org.eventb.core.label="axm01" org.eventb.core.predicate="finite(NODE)" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm02" org.eventb.core.label="axm02" org.eventb.core.predicate="finite(CAP)" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm03" org.eventb.core.label="axm03" org.eventb.core.predicate="finite(JOB)" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm04" org.eventb.core.label="axm04" org.eventb.core.predicate="root ∈ NODE" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm05" org.eventb.core.label="axm05" org.eventb.core.predicate="rootScope ⊆ CAP" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm06" org.eventb.core.label="axm06" org.eventb.core.predicate="rootScope ≠ ∅" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm07" org.eventb.core.label="axm07" org.eventb.core.predicate="parent ∈ (NODE ∖ {root}) → NODE" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm08" org.eventb.core.label="axm08" org.eventb.core.predicate="rank ∈ NODE → ℕ" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm09" org.eventb.core.label="axm09" org.eventb.core.predicate="rank(root) = 0" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm10" org.eventb.core.label="axm10" org.eventb.core.predicate="∀a · a ∈ NODE ∖ {root} ⇒ rank(parent(a)) &lt; rank(a)" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm11" org.eventb.core.label="axm11" org.eventb.core.predicate="path ∈ NODE → ℙ(NODE)" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm12" org.eventb.core.label="axm12" org.eventb.core.predicate="path(root) = {root}" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm13" org.eventb.core.label="axm13" org.eventb.core.predicate="∀a · a ∈ NODE ∖ {root} ⇒ path(a) = {a} ∪ path(parent(a))" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm14" org.eventb.core.label="axm14" org.eventb.core.predicate="owner ∈ JOB → (NODE ∖ {root})" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm15" org.eventb.core.label="axm15" org.eventb.core.predicate="need ∈ JOB → CAP" org.eventb.core.theorem="false" />
+  <org.eventb.core.axiom name="axm16" org.eventb.core.label="axm16" org.eventb.core.predicate="budget ∈ ℕ1" org.eventb.core.theorem="false" />
+</org.eventb.core.contextFile>

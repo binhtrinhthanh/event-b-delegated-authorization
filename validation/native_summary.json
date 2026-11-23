@@ -1,0 +1,60 @@
+{
+  "rodin_version": "3.8.0.202304051545-af2f57e1e",
+  "java_version": "17.0.20",
+  "static_errors": 0,
+  "components": [
+    {
+      "component": "C_Delegation",
+      "accurate": true,
+      "total": 4,
+      "discharged": 4,
+      "open": 0
+    },
+    {
+      "component": "C_Pilot",
+      "accurate": true,
+      "total": 0,
+      "discharged": 0,
+      "open": 0
+    },
+    {
+      "component": "M0_AuthorityLedger",
+      "accurate": true,
+      "total": 36,
+      "discharged": 36,
+      "open": 0
+    },
+    {
+      "component": "M1_DelegationChain",
+      "accurate": true,
+      "total": 33,
+      "discharged": 33,
+      "open": 0
+    },
+    {
+      "component": "M2_SubmittedObligations",
+      "accurate": true,
+      "total": 36,
+      "discharged": 36,
+      "open": 0
+    },
+    {
+      "component": "M3_Pilot",
+      "accurate": true,
+      "total": 0,
+      "discharged": 0,
+      "open": 0
+    }
+  ],
+  "total": 109,
+  "discharged": 109,
+  "open": 0,
+  "procedure": "Native AutoProver with project profile DelegatedAuto; uniform registered tactic, core transformations, built-in PP and Atelier B Provers. No interactive proof, Review, oracle or proof import.",
+  "auto_profile": "DelegatedAuto",
+  "atelier_core": "1.7.1.r16756",
+  "atelier_linux": "2.4.0.r16756",
+  "full_verification_complete": true,
+  "automatic": 109,
+  "manual": 0,
+  "auto_rate": 1.0
+}

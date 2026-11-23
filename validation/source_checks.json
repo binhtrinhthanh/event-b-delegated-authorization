@@ -1,0 +1,12 @@
+{
+  "method": "XML/structural checks; not Event-B parsing or type-checking",
+  "status": "PASS",
+  "components": [
+    "M0_AuthorityLedger.bum",
+    "M1_DelegationChain.bum",
+    "M2_SubmittedObligations.bum",
+    "M3_Pilot.bum",
+    "C_Delegation.buc",
+    "C_Pilot.buc"
+  ]
+}

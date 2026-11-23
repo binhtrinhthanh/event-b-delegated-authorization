@@ -1,0 +1,114 @@
+{
+  "method": "Independent Python finite interpretation; not native Rodin validation",
+  "python": "3.12.14",
+  "runs": [
+    {
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "shape": "chain",
+      "states": 422,
+      "transitions": 882,
+      "event_counts": {
+        "Delegate": 24,
+        "Revoke": 609,
+        "Reserve": 19,
+        "Submit": 19,
+        "CancelConfirmed": 192,
+        "Commit": 19
+      },
+      "seconds": 0.01574388100016222,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    },
+    {
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 2,
+      "shape": "chain",
+      "states": 566,
+      "transitions": 1344,
+      "event_counts": {
+        "Delegate": 24,
+        "Revoke": 825,
+        "Reserve": 37,
+        "Submit": 37,
+        "CancelConfirmed": 384,
+        "Commit": 37
+      },
+      "seconds": 0.02165125600004103,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    },
+    {
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "shape": "star",
+      "states": 770,
+      "transitions": 1731,
+      "event_counts": {
+        "Delegate": 138,
+        "Revoke": 1109,
+        "Reserve": 44,
+        "Submit": 44,
+        "CancelConfirmed": 352,
+        "Commit": 44
+      },
+      "seconds": 0.02929063099963969,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    },
+    {
+      "nodes": 4,
+      "jobs": 3,
+      "budget": 2,
+      "shape": "chain",
+      "states": 5382,
+      "transitions": 16483,
+      "event_counts": {
+        "Delegate": 139,
+        "Revoke": 10457,
+        "Reserve": 373,
+        "Submit": 373,
+        "CancelConfirmed": 4768,
+        "Commit": 373
+      },
+      "seconds": 0.2976169760004268,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    },
+    {
+      "nodes": 4,
+      "jobs": 3,
+      "budget": 2,
+      "shape": "star",
+      "states": 20878,
+      "transitions": 70340,
+      "event_counts": {
+        "Delegate": 4761,
+        "Revoke": 40169,
+        "Reserve": 2310,
+        "Submit": 2310,
+        "CancelConfirmed": 18480,
+        "Commit": 2310
+      },
+      "seconds": 1.2918013299995437,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    },
+    {
+      "nodes": 5,
+      "jobs": 3,
+      "budget": 2,
+      "shape": "chain",
+      "states": 21286,
+      "transitions": 75012,
+      "event_counts": {
+        "Delegate": 636,
+        "Revoke": 50217,
+        "Reserve": 1493,
+        "Submit": 1493,
+        "CancelConfirmed": 19680,
+        "Commit": 1493
+      },
+      "seconds": 1.8001141200002166,
+      "status": "EXHAUSTED_SAFE_SIMULATION_CHECKED"
+    }
+  ]
+}

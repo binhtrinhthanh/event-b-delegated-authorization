@@ -1,0 +1,923 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "runs": [
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 150,
+      "transitions": 312,
+      "max_depth": 10,
+      "seconds": 0.0013433280000754166,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 170,
+      "transitions": 365,
+      "max_depth": 10,
+      "seconds": 0.0014558379998561577,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 2,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 222,
+      "transitions": 543,
+      "max_depth": 11,
+      "seconds": 0.002103073999933258,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 2,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 242,
+      "transitions": 605,
+      "max_depth": 11,
+      "seconds": 0.0023364660000879667,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 4,
+      "jobs": 3,
+      "budget": 2,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 1790,
+      "transitions": 5576,
+      "max_depth": 15,
+      "seconds": 0.02373398100007762,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 4,
+      "jobs": 3,
+      "budget": 2,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 2230,
+      "transitions": 7265,
+      "max_depth": 15,
+      "seconds": 0.02985560000024634,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 4,
+      "jobs": 3,
+      "budget": 3,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 2222,
+      "transitions": 7493,
+      "max_depth": 16,
+      "seconds": 0.02997358799984795,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 4,
+      "jobs": 3,
+      "budget": 3,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 2662,
+      "transitions": 9317,
+      "max_depth": 16,
+      "seconds": 0.03786528699993141,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 5,
+      "jobs": 3,
+      "budget": 2,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 4926,
+      "transitions": 17258,
+      "max_depth": 17,
+      "seconds": 0.07243950900010532,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 5,
+      "jobs": 3,
+      "budget": 2,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 6690,
+      "transitions": 25140,
+      "max_depth": 17,
+      "seconds": 0.104383350000262,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 6,
+      "jobs": 4,
+      "budget": 2,
+      "topology": "chain",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 33278,
+      "transitions": 134950,
+      "max_depth": 21,
+      "seconds": 0.591169094000179,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 6,
+      "jobs": 4,
+      "budget": 2,
+      "topology": "star",
+      "variant": "correct",
+      "status": "EXHAUSTED_SAFE",
+      "states": 54150,
+      "transitions": 238350,
+      "max_depth": 21,
+      "seconds": 1.1901248799999848,
+      "violations": [],
+      "trace": []
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "scope_expansion",
+      "status": "VIOLATION",
+      "states": 2,
+      "transitions": 2,
+      "max_depth": 1,
+      "seconds": 7.899999991423101e-05,
+      "violations": [
+        "scope_attenuation"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=2)",
+          "state": {
+            "scopes": [
+              1,
+              2,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "local_revocation",
+      "status": "VIOLATION",
+      "states": 13,
+      "transitions": 13,
+      "max_depth": 3,
+      "seconds": 9.646599983170745e-05,
+      "violations": [
+        "live_chain_at_use"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Revoke(0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 1,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 1,
+            "jobs": [
+              1,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "cached_authorization",
+      "status": "VIOLATION",
+      "states": 61,
+      "transitions": 92,
+      "max_depth": 5,
+      "seconds": 0.00045651899972654064,
+      "violations": [
+        "live_chain_at_use"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              1,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Submit(job=0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              2,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Revoke(0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 1,
+            "jobs": [
+              2,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Commit(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 1,
+            "jobs": [
+              3,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              1,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "no_shared_budget",
+      "status": "VIOLATION",
+      "states": 25,
+      "transitions": 31,
+      "max_depth": 4,
+      "seconds": 0.00014660099986940622,
+      "violations": [
+        "shared_budget"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(1->2,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              1
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              1
+            ],
+            "revoked": 0,
+            "jobs": [
+              1,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=1,agent=2)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              1
+            ],
+            "revoked": 0,
+            "jobs": [
+              1,
+              1
+            ],
+            "held": [
+              1,
+              1
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "early_release",
+      "status": "VIOLATION",
+      "states": 36,
+      "transitions": 45,
+      "max_depth": 4,
+      "seconds": 0.00020496999968599994,
+      "violations": [
+        "outstanding_obligation_covered"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              1,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Submit(job=0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              2,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "ReleaseBeforeCancel(job=0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              2,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "jobs": 2,
+      "budget": 1,
+      "topology": "chain",
+      "variant": "replay_commit",
+      "status": "VIOLATION",
+      "states": 63,
+      "transitions": 98,
+      "max_depth": 5,
+      "seconds": 0.0004477060001590871,
+      "violations": [
+        "shared_budget",
+        "at_most_once"
+      ],
+      "trace": [
+        {
+          "event": "INITIALISATION",
+          "state": {
+            "scopes": [
+              1,
+              0,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Delegate(0->1,scope=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              0,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Reserve(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              1,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Submit(job=0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              2,
+              0
+            ],
+            "held": [
+              1,
+              0
+            ],
+            "payments": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "event": "Commit(job=0,agent=1)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              3,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "event": "ReplayCommit(job=0)",
+          "state": {
+            "scopes": [
+              1,
+              1,
+              0
+            ],
+            "revoked": 0,
+            "jobs": [
+              3,
+              0
+            ],
+            "held": [
+              0,
+              0
+            ],
+            "payments": [
+              2,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

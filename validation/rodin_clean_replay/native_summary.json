@@ -1,0 +1,28 @@
+{
+  "rodin": "3.8.0.202304051545-af2f57e1e",
+  "java": "openjdk version \"21.0.13\" 2026-10-20",
+  "atelier_core": "1.7.1.r16756",
+  "atelier_linux": "2.4.0.r16756",
+  "auto_profile": "DelegatedAuto",
+  "clean_workspace": true,
+  "static_errors": 0,
+  "total": 109,
+  "automatic": 109,
+  "manual": 0,
+  "open": 0,
+  "archived_inventory_match": true,
+  "obligations_by_component": {
+    "C_Delegation": 4,
+    "M0_AuthorityLedger": 36,
+    "M1_DelegationChain": 33,
+    "M2_SubmittedObligations": 36
+  },
+  "source_sha256": {
+    "C_Delegation.buc": "bf983e645ad7ffa34c204c29570eab22cf61145c7a794b417518e3f0103b9d47",
+    "C_Pilot.buc": "6f4045842875c9c40218c8d1519749af646e18b74d9bafd5f808f5ffd00c237a",
+    "M0_AuthorityLedger.bum": "76dd30897bfe625dbc8086ffe4fe4aa3dbc6c4940589ca084d0fdba40880f7be",
+    "M1_DelegationChain.bum": "6f8113e8a506d03aa447e3999abae8ea99e30e058b654cd97d97e2cfc31dc470",
+    "M2_SubmittedObligations.bum": "59b7a8fa37bf4e8ad0aad04e91c86aebcaf7f106cb69f2c0520cb2daf553e9d0",
+    "M3_Pilot.bum": "b936661c71bc4ce75feb0358a83ea230952c391418ffbfecbe960b10db26e2b7"
+  }
+}

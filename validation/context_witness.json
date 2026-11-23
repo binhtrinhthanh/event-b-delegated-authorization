@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "method": "explicit finite interpretation of C_Pilot bindings against all 16 C_Delegation axioms",
+  "axioms": {
+    "axm01": true,
+    "axm02": true,
+    "axm03": true,
+    "axm04": true,
+    "axm05": true,
+    "axm06": true,
+    "axm07": true,
+    "axm08": true,
+    "axm09": true,
+    "axm10": true,
+    "axm11": true,
+    "axm12": true,
+    "axm13": true,
+    "axm14": true,
+    "axm15": true,
+    "axm16": true
+  }
+}
