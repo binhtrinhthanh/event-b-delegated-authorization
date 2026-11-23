@@ -1,0 +1,27 @@
+[INFO] Installing CLI binaries to a new temporary directory
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/C_Delegation.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/C_Delegation.bps. Assuming that no proofs are discharged for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M0_AuthorityLedger.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M0_AuthorityLedger.bps. Assuming that no proofs are discharged for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M1_DelegationChain.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M1_DelegationChain.bps. Assuming that no proofs are discharged for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M2_SubmittedObligations.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M2_SubmittedObligations.bps. Assuming that no proofs are discharged for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/C_Pilot.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/C_Pilot.bps. Assuming that no proofs are discharged for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M3_Pilot.bpo. Assuming that no proofs have been generated for model element.
+[INFO] Could not find file /tmp/tmpjq2mj89s/DelegatedAuthorization/M3_Pilot.bps. Assuming that no proofs are discharged for model element.
+[INFO] Starting ProB's Prolog Core. Path is /tmp/prob-java1001994483758057789/probcli.sh
+[INFO] CLI startup output: Starting Socket Server
+[INFO] CLI startup output: Application Path: /tmp/prob-java1001994483758057789
+[INFO] CLI startup output: Port: 41803
+[INFO] Received port number from CLI: 41803
+[INFO] CLI startup output: probcli revision: 716929f528b333dd3901a0521fc0d3460a488af7
+[INFO] CLI startup output: user interrupt reference id: 151
+[INFO] Received user interrupt reference from CLI: 151
+[INFO] prolog dialect: sicstus[0m
+[INFO] -- starting command loop --[0m
+[INFO] Connected: 127.0.0.1[0m
+[INFO] % unused_constants(1,[rank])[0m
+[INFO] sending interrupt signal
+[INFO] Socket closed: $socket(15)[0m

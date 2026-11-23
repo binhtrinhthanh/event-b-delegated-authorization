@@ -1,0 +1,28 @@
+% unused_constants(1,[rank])
+% Runtime for SOLUTION for SETUP_CONSTANTS: 152 ms (walltime: 152 ms)
+% Runtime to FINALISE SETUP_CONSTANTS: 1 ms (walltime: 0 ms)
+
+ALL OPERATIONS COVERED
+
+Found "eventerror" in state id 121
+Model checking time: 366 ms (395 ms walltime)
+States analysed: 121
+Transitions fired: 535
+Breadth-first levels: 6
+*** COUNTER EXAMPLE FOUND ***
+
+event_error:Commit:simulation_error
+*** TRACE (length=6):
+ 1: SETUP_CONSTANTS(need={(req1|->readCap),(req2|->writeCap),(req3|->readCap)},root=u,rootScope={readCap,writeCap},budget=2,parent={(a1|->u),(a2|->a1),(a3|->a1)},path={(u|->{u}),(a1|->{u,a1}),(a2|->{u,a1,a2}),(a3|->{u,a1,a3})},rank={(u|->0),(a1|->1),(a2|->2),(a3|->2)},owner={(req1|->a1),(req2|->a2),(req3|->a3)})
+ 2: INITIALISATION(auth={(u|->readCap),(u|->writeCap)},badUse=FALSE,cancelled={},committed={},effectCount={(req1|->0),(req2|->0),(req3|->0)},issued={u},pending={},revoked={},scope={(u|->readCap),(u|->writeCap)},submitted={},used=0)
+ 3: Delegate(a1,{(u|->readCap),(u|->writeCap),(a1|->readCap)},{readCap})
+ 4: Reserve(req1)
+ 5: Submit(req1,{})
+ 6: Revoke(u,{})
+! *** error occurred ***
+! event_error:Commit:simulation_error
+
+% Saving history (json format) to: /workspace/scratch/02291c428522/work/1/DelegatedAuthorization-EventB/implementation/supplement/native_results/cached_authorization/trace.json
+% done
+
+! Total Errors: 1, Warnings:0

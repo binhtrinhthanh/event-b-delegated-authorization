@@ -1,0 +1,464 @@
+{
+  "baseline_environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "bounded_conformance": [
+    {
+      "configuration": "chain_budget1",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "states": 422,
+      "checked_commands": 8862,
+      "enabled_edges": 882,
+      "rejected_inputs": 7980,
+      "seconds": 0.852966484000035,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "chain_budget2",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 2,
+      "states": 566,
+      "checked_commands": 11886,
+      "enabled_edges": 1344,
+      "rejected_inputs": 10542,
+      "seconds": 1.210960693000061,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "star_budget1",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "states": 770,
+      "checked_commands": 16170,
+      "enabled_edges": 1731,
+      "rejected_inputs": 14439,
+      "seconds": 1.7133292099999835,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "star_budget2",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 2,
+      "states": 1058,
+      "checked_commands": 22218,
+      "enabled_edges": 2691,
+      "rejected_inputs": 19527,
+      "seconds": 2.6165516779999507,
+      "status": "EXHAUSTED_CONFORMANT"
+    }
+  ],
+  "correct_scenarios": 7,
+  "detected_faults": 6,
+  "reservation_races": [
+    {
+      "variant": "atomic_monitor",
+      "trials": 100,
+      "accepted_per_trial": 1,
+      "requirement_violations": 0,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.15946452100001807
+    },
+    {
+      "variant": "non_atomic_reserve",
+      "trials": 100,
+      "accepted_per_trial": 2,
+      "requirement_violations": 100,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.1899964239999008
+    }
+  ],
+  "revocation_orders": [
+    {
+      "order": "Revoke_then_Commit",
+      "trials": 50,
+      "commits_accepted": 0,
+      "tool_effects": 0,
+      "status": "EXPECTED_LINEARIZATION"
+    },
+    {
+      "order": "Commit_then_Revoke",
+      "trials": 50,
+      "commits_accepted": 50,
+      "tool_effects": 50,
+      "status": "EXPECTED_LINEARIZATION"
+    }
+  ],
+  "local_tool_rollback": {
+    "status": "ROLLBACK_AND_RETRY_PASSED",
+    "failed_commit_state_unchanged": true,
+    "partial_release_rows_after_failure": 0,
+    "effects_after_retry": 1,
+    "scope": "Local SQLite tool effect and monitor state share one transaction; not an external-service crash test."
+  },
+  "adapter_checks": {
+    "cross_owner_request_rejected": true,
+    "administrative_operation_not_exposed": true,
+    "scope": "Adapter checks only; Python-process isolation is assumed, not provided."
+  },
+  "archived_native_evidence": {
+    "rodin_version": "3.8.0.202304051545-af2f57e1e",
+    "java_version": "17.0.20",
+    "static_errors": 0,
+    "components": [
+      {
+        "component": "C_Delegation",
+        "accurate": true,
+        "total": 4,
+        "discharged": 4,
+        "open": 0
+      },
+      {
+        "component": "C_Pilot",
+        "accurate": true,
+        "total": 0,
+        "discharged": 0,
+        "open": 0
+      },
+      {
+        "component": "M0_AuthorityLedger",
+        "accurate": true,
+        "total": 36,
+        "discharged": 36,
+        "open": 0
+      },
+      {
+        "component": "M1_DelegationChain",
+        "accurate": true,
+        "total": 33,
+        "discharged": 33,
+        "open": 0
+      },
+      {
+        "component": "M2_SubmittedObligations",
+        "accurate": true,
+        "total": 36,
+        "discharged": 36,
+        "open": 0
+      },
+      {
+        "component": "M3_Pilot",
+        "accurate": true,
+        "total": 0,
+        "discharged": 0,
+        "open": 0
+      }
+    ],
+    "total": 109,
+    "discharged": 109,
+    "open": 0,
+    "procedure": "Native AutoProver with project profile DelegatedAuto; uniform registered tactic, core transformations, built-in PP and Atelier B Provers. No interactive proof, Review, oracle or proof import.",
+    "auto_profile": "DelegatedAuto",
+    "atelier_core": "1.7.1.r16756",
+    "atelier_linux": "2.4.0.r16756",
+    "full_verification_complete": true,
+    "automatic": 109,
+    "manual": 0,
+    "auto_rate": 1.0
+  },
+  "archived_model_controls": {
+    "method": "Native Rodin negative controls with unchanged invariants; not native ProB counterexample generation.",
+    "mutants": [
+      {
+        "mutant": "scope_expansion",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "Delegate/grd5/GRD"
+          }
+        ],
+        "total_open": 1,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 38,
+            "open": 1
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      },
+      {
+        "mutant": "local_revocation",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "Revoke/grd2/GRD"
+          }
+        ],
+        "total_open": 1,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 37,
+            "open": 1
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      },
+      {
+        "mutant": "cached_authorization",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "Commit/inv25/INV"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "Commit/grd2/GRD"
+          }
+        ],
+        "total_open": 2,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 40,
+            "open": 2
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      },
+      {
+        "mutant": "no_shared_budget",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "Reserve/grd3/GRD"
+          }
+        ],
+        "total_open": 1,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 37,
+            "open": 1
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      },
+      {
+        "mutant": "early_release",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReleaseUnconfirmed/inv20/INV"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReleaseUnconfirmed/used/EQL"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReleaseUnconfirmed/pending/EQL"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReleaseUnconfirmed/VAR"
+          }
+        ],
+        "total_open": 4,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 41,
+            "open": 4
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      },
+      {
+        "mutant": "replay_commit",
+        "static_errors": 0,
+        "requirements_unchanged": true,
+        "open_pos": [
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReplayCommit/inv22a/INV"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReplayCommit/inv23/INV"
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "po": "ReplayCommit/VAR"
+          }
+        ],
+        "total_open": 3,
+        "components": [
+          {
+            "component": "C_Delegation",
+            "total": 4,
+            "open": 0
+          },
+          {
+            "component": "C_Pilot",
+            "total": 0,
+            "open": 0
+          },
+          {
+            "component": "M0_AuthorityLedger",
+            "total": 36,
+            "open": 0
+          },
+          {
+            "component": "M1_DelegationChain",
+            "total": 33,
+            "open": 0
+          },
+          {
+            "component": "M2_SubmittedObligations",
+            "total": 43,
+            "open": 3
+          },
+          {
+            "component": "M3_Pilot",
+            "total": 0,
+            "open": 0
+          }
+        ],
+        "status": "EXPECTED_UNDISCHARGED_OBLIGATIONS"
+      }
+    ]
+  }
+}

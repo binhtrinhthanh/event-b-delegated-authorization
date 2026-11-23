@@ -1,0 +1,13 @@
+% unused_constants(1,[rank])
+% Runtime for SOLUTION for SETUP_CONSTANTS: 141 ms (walltime: 141 ms)
+% Runtime to FINALISE SETUP_CONSTANTS: 0 ms (walltime: 0 ms)
+
+ALL OPERATIONS COVERED
+% Model checking finished, all open states visited
+Model checking time: 1991 ms (2388 ms walltime)
+States analysed: 9647
+Transitions fired: 30384
+No counter example found. ALL states visited.
+
+Writing states to dot file /workspace/scratch/02291c428522/work/1/DelegatedAuthorization-EventB/implementation/supplement/native_results/pilot_budget2/graph.dot
+
