@@ -1,0 +1,435 @@
+CONTEXT C_Delegation
+SETS NODE, CAP, JOB
+CONSTANTS root, rootScope, parent, rank, path, owner, need, budget
+AXIOMS
+  @axm01 finite(NODE)
+  @axm02 finite(CAP)
+  @axm03 finite(JOB)
+  @axm04 root ∈ NODE
+  @axm05 rootScope ⊆ CAP
+  @axm06 rootScope ≠ ∅
+  @axm07 parent ∈ (NODE ∖ {root}) → NODE
+  @axm08 rank ∈ NODE → ℕ
+  @axm09 rank(root) = 0
+  @axm10 ∀a · a ∈ NODE ∖ {root} ⇒ rank(parent(a)) < rank(a)
+  @axm11 path ∈ NODE → ℙ(NODE)
+  @axm12 path(root) = {root}
+  @axm13 ∀a · a ∈ NODE ∖ {root} ⇒ path(a) = {a} ∪ path(parent(a))
+  @axm14 owner ∈ JOB → (NODE ∖ {root})
+  @axm15 need ∈ JOB → CAP
+  @axm16 budget ∈ ℕ1
+END
+
+CONTEXT C_Pilot
+EXTENDS C_Delegation
+CONSTANTS u, a1, a2, a3, readCap, writeCap, req1, req2, req3
+AXIOMS
+  @pilot01 partition(NODE, {u}, {a1}, {a2}, {a3})
+  @pilot02 partition(CAP, {readCap}, {writeCap})
+  @pilot03 partition(JOB, {req1}, {req2}, {req3})
+  @pilot04 root = u
+  @pilot05 rootScope = CAP
+  @pilot06 parent = {a1 ↦ u, a2 ↦ a1, a3 ↦ a1}
+  @pilot07 rank = {u ↦ 0, a1 ↦ 1, a2 ↦ 2, a3 ↦ 2}
+  @pilot08 path = {u ↦ {u}, a1 ↦ {u,a1}, a2 ↦ {u,a1,a2}, a3 ↦ {u,a1,a3}}
+  @pilot09 owner = {req1 ↦ a1, req2 ↦ a2, req3 ↦ a3}
+  @pilot10 need = {req1 ↦ readCap, req2 ↦ writeCap, req3 ↦ readCap}
+  @pilot11 budget = 2
+END
+
+MACHINE M0_AuthorityLedger
+SEES C_Delegation
+VARIABLES auth, pending, committed, cancelled, used
+INVARIANTS
+  @inv01 auth ⊆ NODE × CAP
+  @inv02 pending ⊆ JOB
+  @inv02f finite(pending)
+  @inv03 committed ⊆ JOB
+  @inv03f finite(committed)
+  @inv04 cancelled ⊆ JOB
+  @inv05 pending ∩ committed = ∅
+  @inv06 pending ∩ cancelled = ∅
+  @inv07 committed ∩ cancelled = ∅
+  @inv08 used ∈ ℕ
+  @inv09 used = card(pending) + card(committed)
+  @inv10 used ≤ budget
+EVENTS
+  EVENT INITIALISATION
+    THEN
+      @act1 auth ≔ {root} × rootScope
+      @act2 pending ≔ ∅
+      @act3 committed ≔ ∅
+      @act4 cancelled ≔ ∅
+      @act5 used ≔ 0
+    END
+  EVENT SetAuthority
+    ANY P
+    WHERE
+      @grd1 P ⊆ NODE × CAP
+    THEN
+      @act1 auth ≔ P
+    END
+  EVENT Reserve
+    ANY j
+    WHERE
+      @grd1 j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 used < budget
+    THEN
+      @act1 pending ≔ pending ∪ {j}
+      @act2 used ≔ used + 1
+    END
+  EVENT Commit
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 R = pending ∖ {j}
+      @grd4 [theorem] pending = R ∪ {j}
+      @grd5 [theorem] j ∉ R
+      @grd6 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 committed ≔ committed ∪ {j}
+    END
+  EVENT CancelConfirmed
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 R = pending ∖ {j}
+      @grd3 [theorem] pending = R ∪ {j}
+      @grd4 [theorem] j ∉ R
+      @grd5 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 cancelled ≔ cancelled ∪ {j}
+      @act3 used ≔ used − 1
+    END
+END
+
+MACHINE M1_DelegationChain
+REFINES M0_AuthorityLedger
+SEES C_Delegation
+VARIABLES auth, pending, committed, cancelled, used, issued, scope, revoked
+INVARIANTS
+  @inv11 issued ⊆ NODE
+  @inv12 root ∈ issued
+  @inv13 scope ⊆ NODE × CAP
+  @inv13d dom(scope) = issued
+  @inv13b ∀a · a ∈ NODE ∖ issued ⇒ scope[{a}] = ∅
+  @inv14 scope[{root}] = rootScope
+  @inv15 revoked ⊆ issued
+  @inv16 ∀a · a ∈ issued ⇒ path(a) ⊆ issued
+  @inv16b ∀a · a ∈ issued ∖ {root} ⇒ parent(a) ∈ issued
+  @inv17 ∀a · a ∈ issued ∖ {root} ⇒ scope[{a}] ⊆ scope[{parent(a)}]
+  @inv18 ∀a · a ∈ issued ⇒ scope[{a}] ≠ ∅
+  @inv18b ∀a · a ∈ issued ⇒ scope[{a}] ⊆ rootScope
+  @inv19 auth = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}
+EVENTS
+  EVENT INITIALISATION
+    THEN
+      @act1 auth ≔ {root} × rootScope
+      @act2 pending ≔ ∅
+      @act3 committed ≔ ∅
+      @act4 cancelled ≔ ∅
+      @act5 used ≔ 0
+      @act6 issued ≔ {root}
+      @act7 scope ≔ {root} × rootScope
+      @act8 revoked ≔ ∅
+    END
+  EVENT Delegate
+    REFINES SetAuthority
+    ANY a, S, P
+    WHERE
+      @grd1 a ∈ NODE ∖ issued
+      @grd2 a ∈ NODE ∖ {root}
+      @grd3 parent(a) ∈ issued
+      @grd4 path(parent(a)) ∩ revoked = ∅
+      @grd5 S ⊆ scope[{parent(a)}]
+      @grd6 S ⊆ CAP
+      @grd7 S ≠ ∅
+      @grd8 P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 issued ≔ issued ∪ {a}
+      @act3 scope ≔ scope ∪ ({a} × S)
+    END
+  EVENT Revoke
+    REFINES SetAuthority
+    ANY a, P
+    WHERE
+      @grd1 a ∈ issued ∖ revoked
+      @grd2 P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 revoked ≔ revoked ∪ {a}
+    END
+  EVENT Reserve
+    REFINES Reserve
+    ANY j
+    WHERE
+      @grd1 j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 used < budget
+    THEN
+      @act1 pending ≔ pending ∪ {j}
+      @act2 used ≔ used + 1
+    END
+  EVENT Commit
+    REFINES Commit
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 R = pending ∖ {j}
+      @grd4 [theorem] pending = R ∪ {j}
+      @grd5 [theorem] j ∉ R
+      @grd6 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 committed ≔ committed ∪ {j}
+    END
+  EVENT CancelConfirmed
+    REFINES CancelConfirmed
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 R = pending ∖ {j}
+      @grd3 [theorem] pending = R ∪ {j}
+      @grd4 [theorem] j ∉ R
+      @grd5 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 cancelled ≔ cancelled ∪ {j}
+      @act3 used ≔ used − 1
+    END
+END
+
+MACHINE M2_SubmittedObligations
+REFINES M1_DelegationChain
+SEES C_Delegation
+VARIABLES auth, pending, committed, cancelled, used, issued, scope, revoked, submitted, effectCount, badUse
+INVARIANTS
+  @inv20 submitted ⊆ pending
+  @inv21 effectCount ∈ JOB → ℕ
+  @inv22a ∀j · j ∈ committed ⇒ effectCount(j) = 1
+  @inv22b ∀j · j ∈ JOB ∖ committed ⇒ effectCount(j) = 0
+  @inv23 ∀j · j ∈ JOB ⇒ effectCount(j) ≤ 1
+  @inv24 badUse ∈ BOOL
+  @inv25 badUse = FALSE
+VARIANT card(pending ∖ submitted)
+EVENTS
+  EVENT INITIALISATION
+    THEN
+      @act1 auth ≔ {root} × rootScope
+      @act2 pending ≔ ∅
+      @act3 committed ≔ ∅
+      @act4 cancelled ≔ ∅
+      @act5 used ≔ 0
+      @act6 issued ≔ {root}
+      @act7 scope ≔ {root} × rootScope
+      @act8 revoked ≔ ∅
+      @act9 submitted ≔ ∅
+      @act10 effectCount ≔ JOB × {0}
+      @act11 badUse ≔ FALSE
+    END
+  EVENT Delegate
+    REFINES Delegate
+    ANY a, S, P
+    WHERE
+      @grd1 a ∈ NODE ∖ issued
+      @grd2 a ∈ NODE ∖ {root}
+      @grd3 parent(a) ∈ issued
+      @grd4 path(parent(a)) ∩ revoked = ∅
+      @grd5 S ⊆ scope[{parent(a)}]
+      @grd6 S ⊆ CAP
+      @grd7 S ≠ ∅
+      @grd8 P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 issued ≔ issued ∪ {a}
+      @act3 scope ≔ scope ∪ ({a} × S)
+    END
+  EVENT Revoke
+    REFINES Revoke
+    ANY a, P
+    WHERE
+      @grd1 a ∈ issued ∖ revoked
+      @grd2 P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 revoked ≔ revoked ∪ {a}
+    END
+  EVENT Reserve
+    REFINES Reserve
+    ANY j
+    WHERE
+      @grd1 j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 used < budget
+    THEN
+      @act1 pending ≔ pending ∪ {j}
+      @act2 used ≔ used + 1
+      @act3 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT Submit CONVERGENT
+    ANY j, T
+    WHERE
+      @grd1 j ∈ pending ∖ submitted
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 T = (pending ∖ submitted) ∖ {j}
+      @grd4 [theorem] pending ∖ submitted = T ∪ {j}
+      @grd5 [theorem] j ∉ T
+      @grd6 [theorem] pending ∖ (submitted ∪ {j}) = T
+      @grd7 [theorem] finite(T)
+      @grd8 [theorem] card(pending ∖ submitted) = card(T) + 1
+      @grd9 [theorem] card(pending ∖ (submitted ∪ {j})) = card(T)
+    THEN
+      @act1 submitted ≔ submitted ∪ {j}
+      @act2 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT Commit
+    REFINES Commit
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 R = pending ∖ {j}
+      @grd4 [theorem] pending = R ∪ {j}
+      @grd5 [theorem] j ∉ R
+      @grd6 [theorem] finite(R)
+      @grd7 j ∈ submitted
+    THEN
+      @act1 pending ≔ R
+      @act2 committed ≔ committed ∪ {j}
+      @act3 submitted ≔ submitted ∖ {j}
+      @act4 effectCount(j) ≔ effectCount(j) + 1
+      @act5 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT CancelConfirmed
+    REFINES CancelConfirmed
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 R = pending ∖ {j}
+      @grd3 [theorem] pending = R ∪ {j}
+      @grd4 [theorem] j ∉ R
+      @grd5 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 cancelled ≔ cancelled ∪ {j}
+      @act3 used ≔ used − 1
+      @act4 submitted ≔ submitted ∖ {j}
+    END
+END
+
+MACHINE M3_Pilot
+REFINES M2_SubmittedObligations
+SEES C_Pilot
+VARIABLES auth, pending, committed, cancelled, used, issued, scope, revoked, submitted, effectCount, badUse
+INVARIANTS
+EVENTS
+  EVENT INITIALISATION
+    THEN
+      @act1 auth ≔ {root} × rootScope
+      @act2 pending ≔ ∅
+      @act3 committed ≔ ∅
+      @act4 cancelled ≔ ∅
+      @act5 used ≔ 0
+      @act6 issued ≔ {root}
+      @act7 scope ≔ {root} × rootScope
+      @act8 revoked ≔ ∅
+      @act9 submitted ≔ ∅
+      @act10 effectCount ≔ JOB × {0}
+      @act11 badUse ≔ FALSE
+    END
+  EVENT Delegate
+    REFINES Delegate
+    ANY a, S, P
+    WHERE
+      @grd1 a ∈ NODE ∖ issued
+      @grd2 a ∈ NODE ∖ {root}
+      @grd3 parent(a) ∈ issued
+      @grd4 path(parent(a)) ∩ revoked = ∅
+      @grd5 S ⊆ scope[{parent(a)}]
+      @grd6 S ⊆ CAP
+      @grd7 S ≠ ∅
+      @grd8 P = (scope ∪ ({a} × S)) ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ revoked = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 issued ≔ issued ∪ {a}
+      @act3 scope ≔ scope ∪ ({a} × S)
+    END
+  EVENT Revoke
+    REFINES Revoke
+    ANY a, P
+    WHERE
+      @grd1 a ∈ issued ∖ revoked
+      @grd2 P = scope ∩ {x,k · x ∈ NODE ∧ k ∈ CAP ∧ path(x) ∩ (revoked ∪ {a}) = ∅ ∣ x ↦ k}
+    THEN
+      @act1 auth ≔ P
+      @act2 revoked ≔ revoked ∪ {a}
+    END
+  EVENT Reserve
+    REFINES Reserve
+    ANY j
+    WHERE
+      @grd1 j ∈ JOB ∖ (pending ∪ committed ∪ cancelled)
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 used < budget
+    THEN
+      @act1 pending ≔ pending ∪ {j}
+      @act2 used ≔ used + 1
+      @act3 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT Submit CONVERGENT
+    REFINES Submit
+    ANY j, T
+    WHERE
+      @grd1 j ∈ pending ∖ submitted
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 T = (pending ∖ submitted) ∖ {j}
+      @grd4 [theorem] pending ∖ submitted = T ∪ {j}
+      @grd5 [theorem] j ∉ T
+      @grd6 [theorem] pending ∖ (submitted ∪ {j}) = T
+      @grd7 [theorem] finite(T)
+      @grd8 [theorem] card(pending ∖ submitted) = card(T) + 1
+      @grd9 [theorem] card(pending ∖ (submitted ∪ {j})) = card(T)
+    THEN
+      @act1 submitted ≔ submitted ∪ {j}
+      @act2 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT Commit
+    REFINES Commit
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 owner(j) ↦ need(j) ∈ auth
+      @grd3 R = pending ∖ {j}
+      @grd4 [theorem] pending = R ∪ {j}
+      @grd5 [theorem] j ∉ R
+      @grd6 [theorem] finite(R)
+      @grd7 j ∈ submitted
+    THEN
+      @act1 pending ≔ R
+      @act2 committed ≔ committed ∪ {j}
+      @act3 submitted ≔ submitted ∖ {j}
+      @act4 effectCount(j) ≔ effectCount(j) + 1
+      @act5 badUse ≔ bool(badUse = TRUE ∨ owner(j) ↦ need(j) ∉ auth)
+    END
+  EVENT CancelConfirmed
+    REFINES CancelConfirmed
+    ANY j, R
+    WHERE
+      @grd1 j ∈ pending
+      @grd2 R = pending ∖ {j}
+      @grd3 [theorem] pending = R ∪ {j}
+      @grd4 [theorem] j ∉ R
+      @grd5 [theorem] finite(R)
+    THEN
+      @act1 pending ≔ R
+      @act2 cancelled ≔ cancelled ∪ {j}
+      @act3 used ≔ used − 1
+      @act4 submitted ≔ submitted ∖ {j}
+    END
+END

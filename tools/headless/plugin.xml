@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+ <extension point="org.eclipse.core.runtime.applications" id="build">
+  <application><run class="delegated.BuildDelegation"/></application>
+ </extension>
+ <extension point="org.eventb.core.seqprover.autoTactics">
+  <autoTactic id="automatic" name="Delegated Authorization Automatic Strategy" class="delegated.AutomaticTactic" auto="true" post="false"/>
+ </extension>
+</plugin>
