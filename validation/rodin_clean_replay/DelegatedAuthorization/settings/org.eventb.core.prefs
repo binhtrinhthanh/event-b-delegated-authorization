@@ -1,3 +1,0 @@
-Auto-Tactics\ Profil=DelegatedAuto
-Tactics\ Map=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<tactic_pref>\n    <pref_unit pref_key\="DelegatedAuto">\n        <simple tactic_id\="delegated.batch.automatic"/>\n    </pref_unit>\n</tactic_pref>\n
-eclipse.preferences.version=1
