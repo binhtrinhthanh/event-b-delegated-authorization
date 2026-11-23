@@ -1,0 +1,449 @@
+[
+  {
+    "mutant": "scope_expansion",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "scope_attenuation"
+        ]
+      }
+    ]
+  },
+  {
+    "mutant": "local_revocation",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap, writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          3
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Revoke",
+        "bindings": {
+          "a": "a1",
+          "P": "{u ↦ readCap, u ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Revoke",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "live_chain_authority"
+        ]
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Reserve",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "live_chain_authority",
+          "authorization_at_use"
+        ]
+      }
+    ]
+  },
+  {
+    "mutant": "cached_authorization",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap, writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          3
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Reserve",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Submit",
+        "bindings": {
+          "j": "req2",
+          "T": "∅"
+        },
+        "implementation_command": [
+          "Submit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Revoke",
+        "bindings": {
+          "a": "a1",
+          "P": "{u ↦ readCap, u ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Revoke",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Commit",
+        "bindings": {
+          "j": "req2",
+          "R": "∅"
+        },
+        "implementation_command": [
+          "Commit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "authorization_at_use"
+        ]
+      }
+    ]
+  },
+  {
+    "mutant": "no_shared_budget",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap, writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          3
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a3",
+          "S": "{readCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap, a3 ↦ readCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          3,
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Reserve",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req3"
+        },
+        "implementation_command": [
+          "Reserve",
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req1"
+        },
+        "implementation_command": [
+          "Reserve",
+          0
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "shared_budget"
+        ]
+      }
+    ]
+  },
+  {
+    "mutant": "early_release",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap, writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          3
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Reserve",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Submit",
+        "bindings": {
+          "j": "req2",
+          "T": "∅"
+        },
+        "implementation_command": [
+          "Submit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "ReleaseUnconfirmed",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "ReleaseUnconfirmed",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "obligation_coverage"
+        ]
+      }
+    ]
+  },
+  {
+    "mutant": "replay_commit",
+    "status": "CANDIDATE_NATIVE_ANIMATION_TRACE; observed prototype witness, not a ProB trace",
+    "steps": [
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a1",
+          "S": "{readCap, writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          1,
+          3
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Delegate",
+        "bindings": {
+          "a": "a2",
+          "S": "{writeCap}",
+          "P": "{u ↦ readCap, u ↦ writeCap, a1 ↦ readCap, a1 ↦ writeCap, a2 ↦ writeCap}"
+        },
+        "implementation_command": [
+          "Delegate",
+          2,
+          2
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Reserve",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Reserve",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Submit",
+        "bindings": {
+          "j": "req2",
+          "T": "∅"
+        },
+        "implementation_command": [
+          "Submit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "Commit",
+        "bindings": {
+          "j": "req2",
+          "R": "∅"
+        },
+        "implementation_command": [
+          "Commit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": []
+      },
+      {
+        "native_event": "ReplayCommit",
+        "bindings": {
+          "j": "req2"
+        },
+        "implementation_command": [
+          "Commit",
+          1
+        ],
+        "prototype_accepted": true,
+        "requirements_violated": [
+          "ledger_conservation",
+          "at_most_once",
+          "effect_count_membership"
+        ]
+      }
+    ]
+  }
+]

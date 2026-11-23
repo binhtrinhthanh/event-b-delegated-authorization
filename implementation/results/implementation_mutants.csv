@@ -1,0 +1,7 @@
+mutant,detected,first_divergence,requirements
+scope_expansion,True,1,scope_attenuation
+local_revocation,True,2,authorization_at_use;live_chain_authority
+cached_authorization,True,5,authorization_at_use
+no_shared_budget,True,5,shared_budget
+early_release,True,4,obligation_coverage
+replay_commit,True,5,at_most_once;effect_count_membership;ledger_conservation
