@@ -13,6 +13,7 @@ Replication package containing Event-B/Rodin models, automatic proof evidence, a
 | All five SQLite configurations | 12,462 states and 358,162 command trials |
 | ProB–oracle–SQLite comparison on three of the five configurations | 11,126 states and 330,106 command trials, with no mismatches |
 | Controlled caller orders checked | 10 |
+| Converging-history assessment on two configurations | 1,339 states, 8,994 prefixes, and 188,874 single-command trials with no mismatches |
 | ProB negative-control witnesses | 2 |
 | Seeded implementation faults detected | 6/6 |
 | Native negative-control model variants | 6 |
@@ -53,6 +54,14 @@ For the pilot, controlled caller orders and late rollback, run:
 ```bash
 python3 implementation/supplement/run_local.py
 ```
+
+For the [converging-history assessment](implementation/supplement/CONVERGING_HISTORIES.md), run:
+
+```bash
+python3 implementation/supplement/check_converging_histories.py --output /tmp/converging_histories_results.json
+```
+
+This supplementary assessment includes trials that overlap the single-prefix assessment. Its count is reported separately.
 
 For the native Event-B comparison and two model-variant witnesses, follow the
 [ProB reproduction instructions](implementation/supplement/README.md). The
