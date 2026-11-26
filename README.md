@@ -1,4 +1,4 @@
-# Formal Verification of Delegated Authorization in Agentic Systems
+# Formal Verification of Delegated Authorization in Agentic Workflows with Staged Execution
 
 Replication package containing Event-B/Rodin models, automatic proof evidence, a Python/SQLite reference monitor, and reproducible experiments for a centralized staged authorization workflow.
 
@@ -14,11 +14,54 @@ Replication package containing Event-B/Rodin models, automatic proof evidence, a
 | ProB–oracle–SQLite comparison on three of the five configurations | 11,126 states and 330,106 command trials, with no mismatches |
 | Controlled caller orders checked | 10 |
 | Converging-history assessment on two configurations | 1,339 states, 8,994 prefixes, and 188,874 single-command trials with no mismatches |
-| ProB negative-control witnesses | 2 |
+| Reachable violation states found by ProB | 2 model variants: cached authorization and early release |
 | Seeded implementation faults detected | 6/6 |
-| Native negative-control model variants | 6 |
+| Native negative-control model variants | 6, with 1, 1, 2, 1, 4 and 3 open obligations in the order listed below |
 
-The proof result uses Rodin 3.8, Atelier B Provers and the supplied `DelegatedAuto` profile. It is not a result for every default Rodin configuration. Negative-control projects intentionally contain open obligations and are excluded from the baseline total.
+The baseline proof result uses Rodin 3.8, Atelier B Provers and the supplied
+`DelegatedAuto` profile. The six negative controls are scope expansion,
+local revocation, cached authorization, missing budget check, early release
+and replayed commit. Rodin reports their open obligations separately.
+The ProB runs provide reachable violation states for the two variants
+listed above.
+
+### Reproduction check
+
+The published results were reproduced from commit
+[`a993aded`](https://github.com/binhtrinhthanh/event-b-delegated-authorization/tree/a993aded2203ecfbbb0297e54b3843f0ede030c9).
+The clean Rodin replay reproduced the full proof-obligation inventory,
+and fresh ProB exploration reproduced the three configuration comparisons
+and both reachability witnesses. The Python and native ProB JSON results
+matched the published results after excluding timing and environment
+metadata. The SHA-256 check passed for all 230 files in the clean checkout.
+
+The rerun used Linux x86_64 on an Intel Xeon Platinum 8573C host with
+9 CPUs visible to the process and approximately 9.7 GiB of RAM. It used
+Python 3.12.14, SQLite 3.53.1, OpenJDK 21.0.13.1, ProB CLI 1.16.1 and
+the ProB2-UI 1.4.0 Java archive. The legacy `java_version` field written
+by `tools/collect_evidence.py` is a fixed value from the original run.
+Use the JVM version observed during the rerun for environment reporting.
+
+The following wall-clock measurements are from one rerun. Some tasks
+overlapped. The ProB exploration column uses ProB's reported model-checking
+wall time, and the comparison column includes graph normalization
+and oracle comparison. Rodin's complete clean replay took 39.84 s,
+including setup, checking and proof.
+
+| Configuration | Python/SQLite (s) | ProB exploration (s) | ProB graph comparison (s) |
+|---|---:|---:|---:|
+| Chain, budget 1 | 1.63 | 0.297 | 0.052 |
+| Chain, budget 2 | 2.20 | — | — |
+| Star, budget 1 | 2.96 | — | — |
+| Star, budget 2 | 4.13 | 0.592 | 0.115 |
+| Pilot, budget 2 | 40.34 | 2.763 | 1.320 |
+
+## Supplementary material
+
+The supplementary PDF accompanying the manuscript presents the two
+Event-B contexts and four refinement machines. The corresponding Rodin
+files are in [`DelegatedAuthorization/`](DelegatedAuthorization/) and
+the proof and experiment evidence is available in the directories below.
 
 ## Repository contents
 
@@ -91,7 +134,7 @@ python3 tools/run_rodin.py --rodin /absolute/path/to/rodin --work /absolute/path
 python3 tools/collect_evidence.py --workspace-project /absolute/path/to/new-work/workspace/DelegatedAuthorization --native-log /absolute/path/to/new-work/rodin_native.log
 ```
 
-The [clean replay evidence](validation/rodin_clean_replay/README.md) records the regenerated 109 proofs. The clean runner imports source contexts and machines without saved proofs. A JDK is required; alternatively pass `--ecj /absolute/path/to/ecj.jar`. Native negative controls can be regenerated with:
+The [clean replay evidence](validation/rodin_clean_replay/README.md) records the regenerated 109 proofs. The clean runner imports source contexts and machines without saved proofs. Use a JDK, or pass `--ecj /absolute/path/to/ecj.jar` if the Java compiler is unavailable. Native negative controls can be regenerated with:
 
 ```bash
 python3 implementation/check_model_mutants.py --rodin /absolute/path/to/rodin
