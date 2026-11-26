@@ -1,0 +1,8977 @@
+{
+  "configuration": {
+    "parents": [
+      null,
+      0,
+      1,
+      2,
+      0,
+      4,
+      5
+    ],
+    "owners": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "needs": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "budget": 3,
+    "capabilities": 2
+  },
+  "traces": 12,
+  "command_trials": 156,
+  "accepted": 138,
+  "mismatches": 0,
+  "evidence": [
+    {
+      "revoked": 1,
+      "job": 2,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0
+            ],
+            "pending": [
+              2,
+              3
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            4
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            1
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              3,
+              4
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              1
+            ],
+            "pending": [
+              3,
+              4,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 1,
+      "job": 2,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            1
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 2,
+      "job": 2,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0
+            ],
+            "pending": [
+              2,
+              3
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            4
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              3,
+              4
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              1
+            ],
+            "pending": [
+              3,
+              4,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 2,
+      "job": 2,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 3,
+      "job": 2,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              0,
+              0
+            ],
+            "pending": [
+              2,
+              3
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            4
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              2,
+              3,
+              4
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              0
+            ],
+            "pending": [
+              3,
+              4
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              4,
+              1,
+              1,
+              1
+            ],
+            "pending": [
+              3,
+              4,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 3,
+      "job": 2,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            2
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              3,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 4,
+      "job": 5,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            0
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              5
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            1
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            4
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1,
+              2
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 4,
+      "job": 5,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            4
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 5,
+      "job": 5,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            0
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              5
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            1
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1,
+              2
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 5,
+      "job": 5,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 6,
+      "job": 5,
+      "commit_first": false,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            0
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              5
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            1
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            6
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "capability no longer current",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": false,
+          "reason": "capacity exhausted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              0,
+              1,
+              5
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "CancelConfirmed",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            2
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              4
+            ],
+            "pending": [
+              0,
+              1,
+              2
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revoked": 6,
+      "job": 5,
+      "commit_first": true,
+      "events": [
+        {
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            2,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            3,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            4,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            5,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Delegate",
+            6,
+            3
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Reserve",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Submit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              5
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "command": [
+            "Revoke",
+            6
+          ],
+          "accepted": true,
+          "reason": "accepted",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "command": [
+            "Commit",
+            5
+          ],
+          "accepted": false,
+          "reason": "job not submitted or already consumed",
+          "state": {
+            "scopes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "phases": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
