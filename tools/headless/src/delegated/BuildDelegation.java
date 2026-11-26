@@ -13,6 +13,7 @@ import org.rodinp.core.*;
 /** Native Rodin static check, POG and core auto-tactic execution. */
 public class BuildDelegation implements IApplication {
  public Object start(IApplicationContext context) throws Exception {
+  System.out.println("JAVA_VERSION "+System.getProperty("java.version"));
   String[] args=(String[])context.getArguments().get(IApplicationContext.APPLICATION_ARGS);
   if(args.length==0)throw new IllegalArgumentException("source project directory required");
   IWorkspace ws=ResourcesPlugin.getWorkspace();
