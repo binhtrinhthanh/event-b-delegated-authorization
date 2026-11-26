@@ -38,9 +38,9 @@ metadata. The SHA-256 check passed for all 230 files in the clean checkout.
 The rerun used Linux x86_64 on an Intel Xeon Platinum 8573C host with
 9 CPUs visible to the process and approximately 9.7 GiB of RAM. It used
 Python 3.12.14, SQLite 3.53.1, OpenJDK 21.0.13.1, ProB CLI 1.16.1 and
-the ProB2-UI 1.4.0 Java archive. The legacy `java_version` field written
-by `tools/collect_evidence.py` is a fixed value from the original run.
-Use the JVM version observed during the rerun for environment reporting.
+the ProB2-UI 1.4.0 Java archive. The headless runner records the JVM
+version from the Rodin process. When collecting an older log without
+that record, the collector reports `java_version` as `null`.
 
 The following wall-clock measurements are from one rerun. Some tasks
 overlapped. The ProB exploration column uses ProB's reported model-checking
