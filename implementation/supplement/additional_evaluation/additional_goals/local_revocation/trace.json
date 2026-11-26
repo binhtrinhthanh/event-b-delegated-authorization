@@ -1,0 +1,89 @@
+{
+  "description": "File created by probcli",
+  "transitionList": [
+    {
+      "name": "$setup_constants",
+      "destState": {
+        "need": "{(req1|->readCap),(req2|->writeCap),(req3|->readCap)}",
+        "root": "u",
+        "rootScope": "{readCap,writeCap}",
+        "budget": "2",
+        "parent": "{(a1|->u),(a2|->a1),(a3|->a1)}",
+        "path": "{(u|->{u}),(a1|->{u,a1}),(a2|->{u,a1,a2}),(a3|->{u,a1,a3})}",
+        "rank": "{(u|->0),(a1|->1),(a2|->2),(a3|->2)}",
+        "owner": "{(req1|->a1),(req2|->a2),(req3|->a3)}"
+      }
+    },
+    {
+      "name": "$initialise_machine",
+      "destState": {
+        "auth": "{(u|->readCap),(u|->writeCap)}",
+        "badUse": "FALSE",
+        "cancelled": "{}",
+        "committed": "{}",
+        "effectCount": "{(req1|->0),(req2|->0),(req3|->0)}",
+        "issued": "{u}",
+        "pending": "{}",
+        "revoked": "{}",
+        "scope": "{(u|->readCap),(u|->writeCap)}",
+        "submitted": "{}",
+        "used": "0"
+      }
+    },
+    {
+      "name": "Delegate",
+      "params": {
+        "a": "a1",
+        "P": "{(u|->readCap),(u|->writeCap),(a1|->readCap)}",
+        "S": "{readCap}"
+      },
+      "destState": {
+        "auth": "{(u|->readCap),(u|->writeCap),(a1|->readCap)}",
+        "issued": "{u,a1}",
+        "scope": "{(u|->readCap),(u|->writeCap),(a1|->readCap)}"
+      },
+      "destStateNotChanged": [
+        "badUse",
+        "cancelled",
+        "committed",
+        "effectCount",
+        "pending",
+        "revoked",
+        "submitted",
+        "used"
+      ]
+    },
+    {
+      "name": "Revoke",
+      "params": {
+        "a": "u",
+        "P": "{(a1|->readCap)}"
+      },
+      "destState": {
+        "auth": "{(a1|->readCap)}",
+        "revoked": "{u}"
+      },
+      "destStateNotChanged": [
+        "badUse",
+        "cancelled",
+        "committed",
+        "effectCount",
+        "issued",
+        "pending",
+        "scope",
+        "submitted",
+        "used"
+      ]
+    }
+  ],
+  "metadata": {
+    "fileType": "Trace",
+    "formatVersion": 1,
+    "savedAt": "2026-11-26T04:15:26Z",
+    "creator": "probcli",
+    "proBCliVersion": "1.16.1-final",
+    "proBCliRevision": "716929f528b333dd3901a0521fc0d3460a488af7",
+    "modelName": "M3_Pilot",
+    "modelFile": "/tmp/da-eval-final/additional_goals/local_revocation/model.eventb"
+  }
+}

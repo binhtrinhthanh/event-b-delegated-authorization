@@ -1,0 +1,15 @@
+[INFO] Installing CLI binaries to a new temporary directory
+[INFO] Starting ProB's Prolog Core. Path is /tmp/prob-java9603127613828930663/probcli.sh
+[INFO] CLI startup output: Starting Socket Server
+[INFO] CLI startup output: Application Path: /tmp/prob-java9603127613828930663
+[INFO] CLI startup output: Port: 50521
+[INFO] Received port number from CLI: 50521
+[INFO] CLI startup output: probcli revision: 716929f528b333dd3901a0521fc0d3460a488af7
+[INFO] CLI startup output: user interrupt reference id: 132
+[INFO] Received user interrupt reference from CLI: 132
+[INFO] prolog dialect: sicstus[0m
+[INFO] -- starting command loop --[0m
+[INFO] Connected: 127.0.0.1[0m
+[INFO] % unused_constants(1,[rank])[0m
+[INFO] sending interrupt signal
+[INFO] Socket closed: $socket(15)[0m

@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "scope_expansion",
+    "goal": "#a.(a : issued & a /= root & not(scope[{a}] <: scope[{parent(a)}]))",
+    "returncode": 0,
+    "reached": true
+  },
+  {
+    "variant": "local_revocation",
+    "goal": "#(a,c).(a|->c : auth & a /: revoked & path(a) /\\ revoked /= {})",
+    "returncode": 0,
+    "reached": true
+  },
+  {
+    "variant": "no_shared_budget",
+    "goal": "used > budget",
+    "returncode": 0,
+    "reached": true
+  },
+  {
+    "variant": "replay_commit",
+    "goal": "#j.(j : JOB & effectCount(j) > 1)",
+    "returncode": 0,
+    "reached": true
+  }
+]

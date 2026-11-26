@@ -1,0 +1,30 @@
+% unused_constants(2,[budget,rank])
+% Runtime for SOLUTION for SETUP_CONSTANTS: 167 ms (walltime: 166 ms)
+% Runtime to FINALISE SETUP_CONSTANTS: 1 ms (walltime: 0 ms)
+
+ALL OPERATIONS COVERED
+Found GOAL in state id 933
+.
+Model checking time: 1957 ms (2059 ms walltime)
+States analysed: 933
+Transitions fired: 3882
+Breadth-first levels: 8
+*** COUNTER EXAMPLE FOUND ***
+
+goal_found
+*** TRACE (length=8):
+ 1: SETUP_CONSTANTS(need={(req1|->readCap),(req2|->writeCap),(req3|->readCap)},root=u,rootScope={readCap,writeCap},budget=2,parent={(a1|->u),(a2|->a1),(a3|->a1)},path={(u|->{u}),(a1|->{u,a1}),(a2|->{u,a1,a2}),(a3|->{u,a1,a3})},rank={(u|->0),(a1|->1),(a2|->2),(a3|->2)},owner={(req1|->a1),(req2|->a2),(req3|->a3)})
+ 2: INITIALISATION(auth={(u|->readCap),(u|->writeCap)},badUse=FALSE,cancelled={},committed={},effectCount={(req1|->0),(req2|->0),(req3|->0)},issued={u},pending={},revoked={},scope={(u|->readCap),(u|->writeCap)},submitted={},used=0)
+ 3: Delegate(a1,{(u|->readCap),(u|->writeCap),(a1|->readCap),(a1|->writeCap)},{readCap,writeCap})
+ 4: Delegate(a3,{(u|->readCap),(u|->writeCap),(a1|->readCap),(a1|->writeCap),(a3|->readCap)},{readCap})
+ 5: Delegate(a2,{(u|->readCap),(u|->writeCap),(a1|->readCap),(a1|->writeCap),(a2|->readCap),(a2|->writeCap),(a3|->readCap)},{readCap,writeCap})
+ 6: Reserve(req3)
+ 7: Reserve(req1)
+ 8: Reserve(req2)
+! *** error occurred ***
+! goal_found
+
+% Saving history (json format) to: /tmp/da-eval-final/additional_goals/no_shared_budget/trace.json
+% done
+
+! Total Errors: 1, Warnings:0
