@@ -1,0 +1,15 @@
+413fe35a8ede89add75afe0db4f2e6ccceb95b01
+Linux 6.18.57 x86_64 GNU/Linux
+model name	: INTEL(R) XEON(R) PLATINUM 8573C
+Visible logical CPUs: 9
+MemTotal:       10206468 kB
+Python 3.12.14
+SQLite 3.53.1
+openjdk version "21.0.13.1" 2026-11-17
+OpenJDK Runtime Environment (build 21.0.13.1+2-1-deb13u1-Debian)
+OpenJDK 64-Bit Server VM (build 21.0.13.1+2-1-deb13u1-Debian, mixed mode, sharing)
+1a364de4833bab665e7827449a06048c914fb62eda6694710eec36a9481f157d  timing-tools/rodin-ranges.tgz
+e9f0c74a6bbf177c9146d01869afa1c4276f5fc8d3b670f31b0230f035753bef  timing-tools/prob.tgz
+226f9fc2542349331cf0cd2be5f26e70485acfa1c3b8a4999a2ef3b65812f3f9  timing-tools/com.clearsy.atelierb.provers.core.linux_2.4.0.r16756.jar
+d9c1df32255a39ad52a5780c3cc6b188846df5cf03c7c37bc580e1583e15ff6e  timing-tools/com.clearsy.atelierb.provers.core_1.7.1.r16756.jar
+97c566b120009c203a2fc8b291f4a9adbc171cf1ccb70f06f6b4e1828c00ce8e  timing-tools/ecj.jar

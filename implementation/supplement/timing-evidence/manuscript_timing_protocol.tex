@@ -1,0 +1,15 @@
+\paragraph{Timing protocol}
+We ran ten sequential repetitions on a Linux x86\_64 host with
+an Intel Xeon Platinum 8573C processor, nine logical CPUs visible
+to the process, and approximately 9.7~GiB of visible RAM.
+The Rodin, ProB, and Python/SQLite measurements did not overlap.
+Each Rodin repetition used a fresh workspace and OpenJDK~21.0.13.1.
+We timed each native AutoProver call and computed the total by
+summing the unrounded component times within each repetition.
+For ProB, we report model-checking wall time and separately
+measure graph normalization and comparison with the oracle.
+The ProB runs use the archived Event-B exports, and their timings
+exclude model export and graph loading. Python/SQLite timings
+cover the per-configuration conformance harness.
+We report the median and observed range (minimum--maximum)
+across the ten repetitions.
