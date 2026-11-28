@@ -1,0 +1,2 @@
+{'configuration': 'pilot_budget2', 'nodes': 4, 'jobs': 3, 'budget': 2, 'states': 9646, 'checked_commands': 299026, 'enabled_edges': 30382, 'rejected_inputs': 268644, 'seconds': 36.99251313599996, 'status': 'EXHAUSTED_CONFORMANT'}
+Checked 10 forced caller orders

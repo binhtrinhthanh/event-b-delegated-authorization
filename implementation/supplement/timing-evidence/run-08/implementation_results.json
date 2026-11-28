@@ -1,0 +1,5613 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "case_study": "Scripted release-preparation agents and executable local SQLite tool adapters; no LLM, external service or deployed product.",
+  "correct_scenarios": [
+    {
+      "scenario": "happy_path",
+      "variant": "correct",
+      "steps": 9,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Delegate",
+            3,
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Reserve",
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              1
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Submit",
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              2
+            ],
+            "pending": [
+              2
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Commit",
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              3
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 6,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              3
+            ],
+            "pending": [
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              3
+            ],
+            "pending": [
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 7,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              3
+            ],
+            "pending": [
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              3
+            ],
+            "pending": [
+              1
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 8,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              3
+            ],
+            "pending": [],
+            "used": 2,
+            "effects": [
+              0,
+              1,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              3
+            ],
+            "pending": [],
+            "used": 2,
+            "effects": [
+              0,
+              1,
+              1
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        }
+      ],
+      "tool_effects": [
+        {
+          "id": 1,
+          "job": 2,
+          "tool": "reports:read",
+          "result": {
+            "report": "Local release assessment: tests passed; deployment requires delegated publish permission."
+          }
+        },
+        {
+          "id": 2,
+          "job": 1,
+          "tool": "releases:publish",
+          "result": {
+            "local_release": "candidate-1"
+          }
+        }
+      ],
+      "release_registry": [
+        [
+          1,
+          "candidate-1"
+        ]
+      ]
+    },
+    {
+      "scenario": "scope_expansion",
+      "variant": "correct",
+      "steps": 2,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "scope exceeds parent",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "local_revocation",
+      "variant": "correct",
+      "steps": 4,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Revoke",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "no current capability",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "cached_authorization",
+      "variant": "correct",
+      "steps": 6,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Revoke",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "capability no longer current",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "no_shared_budget",
+      "variant": "correct",
+      "steps": 6,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Delegate",
+            3,
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Reserve",
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Reserve",
+            0
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "capacity exhausted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "early_release",
+      "variant": "correct",
+      "steps": 5,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "ReleaseUnconfirmed",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "unconfirmed cancellation cannot release resources",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "replay_commit",
+      "variant": "correct",
+      "steps": 6,
+      "first_divergence": null,
+      "conformant": true,
+      "violations": [],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": false,
+          "reason": "job not submitted or already consumed",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [
+        {
+          "id": 1,
+          "job": 1,
+          "tool": "releases:publish",
+          "result": {
+            "local_release": "candidate-1"
+          }
+        }
+      ],
+      "release_registry": [
+        [
+          1,
+          "candidate-1"
+        ]
+      ]
+    }
+  ],
+  "implementation_mutants": [
+    {
+      "scenario": "scope_expansion",
+      "variant": "scope_expansion",
+      "steps": 2,
+      "first_divergence": 1,
+      "conformant": false,
+      "violations": [
+        "scope_attenuation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "scope_attenuation"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              1,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              1,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              1,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "local_revocation",
+      "variant": "local_revocation",
+      "steps": 4,
+      "first_divergence": 2,
+      "conformant": false,
+      "violations": [
+        "authorization_at_use",
+        "live_chain_authority"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Revoke",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "live_chain_authority"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "live_chain_authority",
+            "authorization_at_use"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "cached_authorization",
+      "variant": "cached_authorization",
+      "steps": 6,
+      "first_divergence": 5,
+      "conformant": false,
+      "violations": [
+        "authorization_at_use"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Revoke",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "authorization_at_use"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [
+        {
+          "id": 1,
+          "job": 1,
+          "tool": "releases:publish",
+          "result": {
+            "local_release": "candidate-1"
+          }
+        }
+      ],
+      "release_registry": [
+        [
+          1,
+          "candidate-1"
+        ]
+      ]
+    },
+    {
+      "scenario": "no_shared_budget",
+      "variant": "no_shared_budget",
+      "steps": 6,
+      "first_divergence": 5,
+      "conformant": false,
+      "violations": [
+        "shared_budget"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Delegate",
+            3,
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Reserve",
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Reserve",
+            0
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "shared_budget"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              1,
+              1,
+              1
+            ],
+            "pending": [
+              0,
+              1,
+              2
+            ],
+            "used": 3,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              1
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              1
+            ],
+            "pending": [
+              1,
+              2
+            ],
+            "used": 2,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "early_release",
+      "variant": "early_release",
+      "steps": 5,
+      "first_divergence": 4,
+      "conformant": false,
+      "violations": [
+        "obligation_coverage"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "ReleaseUnconfirmed",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "obligation_coverage"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [],
+      "release_registry": []
+    },
+    {
+      "scenario": "replay_commit",
+      "variant": "replay_commit",
+      "steps": 6,
+      "first_divergence": 5,
+      "conformant": false,
+      "violations": [
+        "at_most_once",
+        "effect_count_membership",
+        "ledger_conservation"
+      ],
+      "trace": [
+        {
+          "step": 0,
+          "command": [
+            "Delegate",
+            1,
+            3
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "step": 1,
+          "command": [
+            "Delegate",
+            2,
+            2
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              0,
+              0
+            ],
+            "pending": [],
+            "used": 0,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "command": [
+            "Reserve",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              1,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "command": [
+            "Submit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              2,
+              0
+            ],
+            "pending": [
+              1
+            ],
+            "used": 1,
+            "effects": [
+              0,
+              0,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": true,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": true,
+          "requirements_violated": [],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "command": [
+            "Commit",
+            1
+          ],
+          "expected_accept": false,
+          "actual_accept": true,
+          "reason": "accepted",
+          "conforms": false,
+          "requirements_violated": [
+            "ledger_conservation",
+            "at_most_once",
+            "effect_count_membership"
+          ],
+          "actual": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 2,
+            "effects": [
+              0,
+              2,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          "expected": {
+            "scopes": [
+              3,
+              3,
+              2,
+              0
+            ],
+            "revoked": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "phases": [
+              0,
+              3,
+              0
+            ],
+            "pending": [],
+            "used": 1,
+            "effects": [
+              0,
+              1,
+              0
+            ],
+            "auth": [
+              3,
+              3,
+              2,
+              0
+            ]
+          }
+        }
+      ],
+      "tool_effects": [
+        {
+          "id": 1,
+          "job": 1,
+          "tool": "releases:publish",
+          "result": {
+            "local_release": "candidate-1"
+          }
+        },
+        {
+          "id": 2,
+          "job": 1,
+          "tool": "releases:publish",
+          "result": {
+            "local_release": "candidate-1"
+          }
+        }
+      ],
+      "release_registry": [
+        [
+          1,
+          "candidate-1"
+        ],
+        [
+          1,
+          "candidate-1"
+        ]
+      ]
+    }
+  ],
+  "bounded_conformance": [
+    {
+      "configuration": "chain_budget1",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "states": 422,
+      "checked_commands": 8862,
+      "enabled_edges": 882,
+      "rejected_inputs": 7980,
+      "seconds": 1.062107400999821,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "chain_budget2",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 2,
+      "states": 566,
+      "checked_commands": 11886,
+      "enabled_edges": 1344,
+      "rejected_inputs": 10542,
+      "seconds": 1.3784821909998755,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "star_budget1",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 1,
+      "states": 770,
+      "checked_commands": 16170,
+      "enabled_edges": 1731,
+      "rejected_inputs": 14439,
+      "seconds": 1.731557450000082,
+      "status": "EXHAUSTED_CONFORMANT"
+    },
+    {
+      "configuration": "star_budget2",
+      "nodes": 3,
+      "jobs": 2,
+      "budget": 2,
+      "states": 1058,
+      "checked_commands": 22218,
+      "enabled_edges": 2691,
+      "rejected_inputs": 19527,
+      "seconds": 2.485505982999939,
+      "status": "EXHAUSTED_CONFORMANT"
+    }
+  ],
+  "concurrency": [
+    {
+      "variant": "atomic_monitor",
+      "trials": 100,
+      "accepted_per_trial": 1,
+      "requirement_violations": 0,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.18635302200004844
+    },
+    {
+      "variant": "non_atomic_reserve",
+      "trials": 100,
+      "accepted_per_trial": 2,
+      "requirement_violations": 100,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.19551040100009232
+    }
+  ],
+  "revocation_linearizations": [
+    {
+      "order": "Revoke_then_Commit",
+      "trials": 50,
+      "commits_accepted": 0,
+      "tool_effects": 0,
+      "status": "EXPECTED_LINEARIZATION"
+    },
+    {
+      "order": "Commit_then_Revoke",
+      "trials": 50,
+      "commits_accepted": 50,
+      "tool_effects": 50,
+      "status": "EXPECTED_LINEARIZATION"
+    }
+  ],
+  "local_tool_rollback": {
+    "status": "ROLLBACK_AND_RETRY_PASSED",
+    "failed_commit_state_unchanged": true,
+    "partial_release_rows_after_failure": 0,
+    "effects_after_retry": 1,
+    "scope": "Local SQLite tool effect and monitor state share one transaction; not an external-service crash test."
+  },
+  "adapter_checks": {
+    "cross_owner_request_rejected": true,
+    "administrative_operation_not_exposed": true,
+    "scope": "Adapter checks only; Python-process isolation is assumed, not provided."
+  },
+  "seconds": 7.345613670000148
+}
