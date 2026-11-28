@@ -1,0 +1,13 @@
+% unused_constants(1,[rank])
+% Runtime for SOLUTION for SETUP_CONSTANTS: 186 ms (walltime: 186 ms)
+% Runtime to FINALISE SETUP_CONSTANTS: 1 ms (walltime: 1 ms)
+
+ALL OPERATIONS COVERED
+% Model checking finished, all open states visited
+Model checking time: 288 ms (328 ms walltime)
+States analysed: 423
+Transitions fired: 884
+No counter example found. ALL states visited.
+
+Writing states to dot file /tmp/tmpudoaopql/graph.dot
+

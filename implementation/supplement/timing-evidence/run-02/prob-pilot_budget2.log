@@ -1,0 +1,13 @@
+% unused_constants(1,[rank])
+% Runtime for SOLUTION for SETUP_CONSTANTS: 162 ms (walltime: 169 ms)
+% Runtime to FINALISE SETUP_CONSTANTS: 0 ms (walltime: 0 ms)
+
+ALL OPERATIONS COVERED
+% Model checking finished, all open states visited
+Model checking time: 2508 ms (3041 ms walltime)
+States analysed: 9647
+Transitions fired: 30384
+No counter example found. ALL states visited.
+
+Writing states to dot file /tmp/tmp21zy35su/graph.dot
+

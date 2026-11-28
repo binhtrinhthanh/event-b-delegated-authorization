@@ -1,0 +1,45 @@
+{"configuration": "chain_budget1", "nodes": 3, "jobs": 2, "budget": 1, "states": 422, "checked_commands": 8862, "enabled_edges": 882, "rejected_inputs": 7980, "seconds": 1.0039106570000058, "status": "EXHAUSTED_CONFORMANT"}
+{"configuration": "chain_budget2", "nodes": 3, "jobs": 2, "budget": 2, "states": 566, "checked_commands": 11886, "enabled_edges": 1344, "rejected_inputs": 10542, "seconds": 1.468793296000058, "status": "EXHAUSTED_CONFORMANT"}
+{"configuration": "star_budget1", "nodes": 3, "jobs": 2, "budget": 1, "states": 770, "checked_commands": 16170, "enabled_edges": 1731, "rejected_inputs": 14439, "seconds": 1.7656356730000198, "status": "EXHAUSTED_CONFORMANT"}
+{"configuration": "star_budget2", "nodes": 3, "jobs": 2, "budget": 2, "states": 1058, "checked_commands": 22218, "enabled_edges": 2691, "rejected_inputs": 19527, "seconds": 2.487418983999987, "status": "EXHAUSTED_CONFORMANT"}
+{
+  "correct_scenarios": 7,
+  "mutants_detected": 6,
+  "bounded_states": 2816,
+  "checked_commands": 59136,
+  "concurrency": [
+    {
+      "variant": "atomic_monitor",
+      "trials": 100,
+      "accepted_per_trial": 1,
+      "requirement_violations": 0,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.17934896799999933
+    },
+    {
+      "variant": "non_atomic_reserve",
+      "trials": 100,
+      "accepted_per_trial": 2,
+      "requirement_violations": 100,
+      "schedule": "Both unsafe reads complete before either write; safe calls start at a shared barrier.",
+      "seconds": 0.17411954900001092
+    }
+  ],
+  "revocation_orders": [
+    {
+      "order": "Revoke_then_Commit",
+      "trials": 50,
+      "commits_accepted": 0,
+      "tool_effects": 0,
+      "status": "EXPECTED_LINEARIZATION"
+    },
+    {
+      "order": "Commit_then_Revoke",
+      "trials": 50,
+      "commits_accepted": 50,
+      "tool_effects": 50,
+      "status": "EXPECTED_LINEARIZATION"
+    }
+  ],
+  "total_seconds": 7.337731695999992
+}
